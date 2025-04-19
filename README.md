@@ -90,7 +90,7 @@ Note: This is my personal GitHub profile and may not reflect the full extent of 
 
 [![X](https://img.shields.io/badge/-Twitter-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://twitter.com/furkannabisumji)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A192F?style=for-the-badge&logo=linkedin&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
-[![Website](https://img.shields.io/badge/-Portfolio-0A192F?style=for-the-badge&logo=vercel&logoColor=64FFDA)](https://furkannabisumji.github.io)
+[![Telegram](https://img.shields.io/badge/-Telegram-0A192F?style=for-the-badge&logo=telegram&logoColor=64FFDA)](https://t.me/furkannabisumji)
 
 </p>
 <p><a href="https://github.com/antonkomarev/github-profile-views-counter">
