@@ -77,9 +77,9 @@ Note: This is my personal GitHub profile and may not reflect the full extent of 
    - PYUSD staking boosts rep; powered by QuickNode Streams/Functions.  
    - Infrastructure: Avail DA, Arbitrum Orbit, and AWS.
 
-3. **RightNewsOnline.com** – *Live News Monetization Platform*  
+3. **[Right News Online](https://rightnewsonline.com)** – *Live News Monetization Platform*  
    Full-stack platform for monetizing political video news in Maharashtra.  
-   - Stack: React, Node.js, AWS S3/EC2/RDS, Razorpay, HLS streaming.  
+   - Stack: React, Node.js, AWS S3/EC2/MERN, Razorpay, HLS streaming.  
    - Admin tools, regional SEO (Hindi slug routing), and mobile-first UI.
 
 </div>
