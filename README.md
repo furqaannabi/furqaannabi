@@ -1,6 +1,6 @@
 # Furkan Nabi Sumji | Building Seamless Systems with Purpose
 
-![giphy](https://github.com/user-attachments/assets/8b1ac72a-3bdf-4b9e-8c2c-f0ee8a5c9682)
+![giphy](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWQ4MWljMno4djB6ZWUxdG9zaHVvZTB2amVxbW9leGFvNXF6ZTNsdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ib6KPmkeAjDTxMxij/giphy.gif)
 
 ## About Me
 
@@ -61,6 +61,8 @@ Note: This is my personal GitHub profile and may not reflect the full extent of 
 
 <br clear="both">
 
+<div align="left">
+
 ## Featured Projects
 
 1. **[SAVR](https://github.com/furkannabisumji/savr)** – *Decentralized ROSCA on Lens Chain*  
@@ -80,8 +82,7 @@ Note: This is my personal GitHub profile and may not reflect the full extent of 
    - Stack: React, Node.js, AWS S3/EC2/RDS, Razorpay, HLS streaming.  
    - Admin tools, regional SEO (Hindi slug routing), and mobile-first UI.
 
-
----
+</div>
 
 ## 📫 Let's Connect
 
