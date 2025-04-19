@@ -63,22 +63,23 @@ Note: This is my personal GitHub profile and may not reflect the full extent of 
 
 ## Featured Projects
 
-1. **SAVR - a decentralized Rotating Savings and Credit Association (ROSCA) platform.** [GitHub Repository](https://github.com/furkannabisumji/savr)
-   - Built a smart contract-powered Rotating Savings and Credit Association (ROSCA) system using Lens Chain + Ethereum Sepolia.
+1. **[SAVR](https://github.com/furkannabisumji/savr)** – *Decentralized ROSCA on Lens Chain*  
+   Built a smart contract-powered Rotating Savings and Credit Association (ROSCA) system on Lens Chain + Ethereum Sepolia.  
+   - Contributions and disbursements managed cross-chain using Chainlink CCIP.  
+   - Yield earned via Aave, randomness soon powered by Chainlink VRF.  
+   - Seamless UX for group creation, deposits, and payout automation.
 
-   - Earns yield through Aave while managing contributions, disbursements, and randomness (soon Chainlink VRF) across chains via Chainlink CCIP.
+2. **[RepCheck](https://github.com/furkannabisumji/repcheck)** – *AI-powered On-chain Reputation*  
+   Co-built with Chanchal for QuickNode hackathon, winning $17K.  
+   - GPT-based logic updates scores based on wallet activity.  
+   - PYUSD staking boosts rep; powered by QuickNode Streams/Functions.  
+   - Infrastructure: Avail DA, Arbitrum Orbit, and AWS.
 
-   - Seamlessly combines group creation, contributions, and interchain. 
+3. **RightNewsOnline.com** – *Live News Monetization Platform*  
+   Full-stack platform for monetizing political video news in Maharashtra.  
+   - Stack: React, Node.js, AWS S3/EC2/RDS, Razorpay, HLS streaming.  
+   - Admin tools, regional SEO (Hindi slug routing), and mobile-first UI.
 
-3. **RepCheck - On-chain AI Reputation** [GitHub Repository](https://github.com/furkannabisumji/repcheck)
-   - Built with Chanchal using QuickNode Streams & Functions.
-   - Users stake PYUSD to improve their rep; activity-based scores updated via GPT logic.
-   - Infrastructure includes Avail DA and Arbitrum Orbit and AWS.
-
-4. **RightNewsOnline.com - Live News Monetization**
-   - Built for political news monetization in Maharashtra.
-   - React, Node.js, AWS S3/EC2/RDS, HLS video, Razorpay, admin tools, and more.
-   - SEO-optimized Hindi slug routing for maximum regional reach.
 
 ---
 
