@@ -4,7 +4,7 @@
 
 ## About Me
 
-I'm Furkan (@furkannabisumji), a full-stack developer passionate about building impactful systems across Web2 and Web3. From decentralized meme battle arenas to AI-powered moderation, I aim to build tech that’s resilient, scalable, and usable by millions. I’ve worked across 30+ projects, led several, and love working at the intersection of AI, blockchain, and system design. Let’s build the future.
+I'm Furkan, a full-stack developer passionate about building impactful systems across Web2 and Web3. From decentralized meme battle arenas to AI-powered moderation, I aim to build tech that’s resilient, scalable, and usable by millions. I’ve worked on many projects, led several, and love working at the intersection of AI, blockchain, and system design. Let’s build the future.
 
 <h3 align="center">
    "Real power comes from building things that just work, again and again, under pressure and at scale."
