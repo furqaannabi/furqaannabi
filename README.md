@@ -75,7 +75,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## 📫 Let's Connect
 
-[![X](https://img.shields.io/badge/-Twitter-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://twitter.com/furkannabisumji)
+[![X](https://img.shields.io/badge/-X-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://x.com/furkannabisumji)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A192F?style=for-the-badge&logo=linkedin&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
 [![Telegram](https://img.shields.io/badge/-Telegram-0A192F?style=for-the-badge&logo=telegram&logoColor=64FFDA)](https://t.me/furkannabisumji)
 
