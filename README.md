@@ -22,7 +22,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## Professional Highlights
 
-- 🥇 Team Lead of Memed.fun*, 1st Place Winner of Lens Spring Hackathon – **20,000 GHO**
+- 🥇 Team Lead of **Memed.fun**, 1st Place Winner of Lens Spring Hackathon – **20,000 GHO**
 - 🏆 Co-led **RepCheck**, an AI-powered on-chain reputation system, winning **$17K** from QuickNode.
 - 🛠️ Architected and Led **SAVR**, a decentralized ROSCA platform on Lens Chain, winning **2500 GHO**
 
