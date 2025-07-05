@@ -22,7 +22,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## Professional Highlights
 
-- 🥇 Team Lead of **Memed.Fun**, 1st Place Winner of Lens Spring Hackathon, winning **20,000 GHO**
+- 🥇 Architected and Led **Memed.Fun**, 1st Place Winner of Lens Spring Hackathon, winning **20,000 GHO**
 - 🏆 Co-led **RepCheck**, an Quicknode-powered on-chain reputation system, winning **$17K** from QuickNode.
 - 🛠️ Architected and Led **SAVR**, a decentralized ROSCA platform on Lens Chain, winning **2500 GHO**
 
@@ -67,7 +67,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
    - Chainlink CCIP for cross-chain fund routing  
    - Aave-integrated pooled yield
 
-3. **[RepCheck](https://github.com/furkannabisumji/repcheck)** Quicknode-powered On-chain Reputation*  
+3. **[RepCheck](https://github.com/furkannabisumji/repcheck)** - *Quicknode-powered On-chain Reputation*  
    Quicknode-powered architecture built for QuickNode hackathon.  
    - Real-time score updates based on wallet behavior  
    - Staking PYUSD boosts rep; Streams + Functions integration  
@@ -76,7 +76,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 ## 📫 Let's Connect
 
 [![X](https://img.shields.io/badge/-X-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://x.com/furkannabisumji)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A192F?style=for-the-badge&logo=linkedin&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
+[![LinkedIn](https://img.shields.io/badge/-Linkedin-0A192F?style=for-the-badge&logo=linkedin&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
 [![Telegram](https://img.shields.io/badge/-Telegram-0A192F?style=for-the-badge&logo=telegram&logoColor=64FFDA)](https://t.me/furkannabisumji)
 
 <p><a href="https://github.com/antonkomarev/github-profile-views-counter">
