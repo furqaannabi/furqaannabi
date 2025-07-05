@@ -22,7 +22,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## Professional Highlights
 
-- 🥇 Team Lead of **Memed.fun**, 1st Place Winner of Lens Spring Hackathon – **20,000 GHO**
+- 🥇 Team Lead of **Memed.Fun**, 1st Place Winner of Lens Spring Hackathon – **20,000 GHO**
 - 🏆 Co-led **RepCheck**, an AI-powered on-chain reputation system, winning **$17K** from QuickNode.
 - 🛠️ Architected and Led **SAVR**, a decentralized ROSCA platform on Lens Chain, winning **2500 GHO**
 
@@ -55,7 +55,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## Featured Projects
 
-1. **[Memed.fun](https://github.com/furkannabisumji/memed)** – *The Social Meme Economy on Lens Chain*  
+1. **[Memed.Fun](https://github.com/furkannabisumji/memed)** – *The Social Meme Economy on Lens Chain*  
    Won 1st place (20,000 GHO) in Lens Spring Hackathon.  
    - Tokenized meme minting as Lens Profiles  
    - Token-gated follows/reacts, stake-as-belief  
