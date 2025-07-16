@@ -1,6 +1,10 @@
+<div align="center">
+
 # Furkan Nabi Sumji | Building Seamless Systems with Purpose
 
-![giphy](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWQ4MWljMno4djB6ZWUxdG9zaHVvZTB2amVxbW9leGFvNXF6ZTNsdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ib6KPmkeAjDTxMxij/giphy.gif)
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWQ4MWljMno4djB6ZWUxdG9zaHVvZTB2amVxbW9leGFvNXF6ZTNsdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ib6KPmkeAjDTxMxij/giphy.gif" alt="giphy" />
+
+</div>
 
 ## About Me
 
@@ -23,7 +27,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 ## Professional Highlights
 
 - 🥇 Architected and Led **Memed.Fun**, 1st Place Winner of Lens Spring Hackathon, winning **20,000 GHO**
-- 🏆 Co-led **RepCheck**, an Quicknode-powered on-chain reputation system, winning **$17K** from QuickNode.
+- 🏆 Co-led **RepCheck**, a Quicknode-powered on-chain reputation system, winning **$17K** from QuickNode.
 - 🛠️ Architected and Led **SAVR**, a decentralized ROSCA platform on Lens Chain, winning **2500 GHO**
 
 ## Tech Stack
@@ -36,22 +40,25 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 ![TypeScript](https://img.shields.io/badge/-TypeScript-0A192F?style=for-the-badge&logo=typescript&logoColor=64FFDA)
 ![Docker](https://img.shields.io/badge/-Docker-0A192F?style=for-the-badge&logo=docker&logoColor=64FFDA)
 ![AWS](https://img.shields.io/badge/-AWS-0A192F?style=for-the-badge&logo=amazon-aws&logoColor=64FFDA)
+
 </div>
 
-<p align="center">
-<table align="center">
-<tr border="none">
+<div align="center">
+
+<table>
+<tr>
 <td width="50%" align="center">
-  <img  align="center"  src="https://github-readme-stats.vercel.app/api?username=furkannabisumji&theme=dark&show_icons=true&count_private=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=furkannabisumji&theme=dark&show_icons=true&count_private=true" />
   <br><br>
-  <img  title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Furkan streak" src="https://github-readme-streak-stats.herokuapp.com/?user=furkannabisumji&theme=dark&hide_border=false" /> 
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=furkannabisumji&theme=dark&hide_border=false" />
 </td>
 <td width="50%" align="center">
-  <img  align="center"  src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=furkannabisumji&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=7"/>
-  </td>
+  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=furkannabisumji&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=7"/>
+</td>
 </tr>
 </table>
-</p>
+
+</div>
 
 ## Featured Projects
 
@@ -67,7 +74,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
    - Chainlink CCIP for cross-chain fund routing  
    - Aave-integrated pooled yield
 
-3. **[RepCheck](https://github.com/furkannabisumji/repcheck)** - *Quicknode-powered On-chain Reputation*  
+3. **[RepCheck](https://github.com/furkannabisumji/repcheck)** – *Quicknode-powered On-chain Reputation*  
    Quicknode-powered architecture built for QuickNode hackathon.  
    - Real-time score updates based on wallet behavior  
    - Staking PYUSD boosts rep; Streams + Functions integration  
@@ -75,10 +82,16 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 ## 📫 Let's Connect
 
+<div align="center">
+
 [![X](https://img.shields.io/badge/-X-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://x.com/furkannabisumji)
-[![LinkedIn](https://img.shields.io/badge/-Linkedin-0A192F?style=for-the-badge&logo=linkedin&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A192F?style=for-the-badge&logo=LinkedIn&logoColor=64FFDA)](https://www.linkedin.com/in/furkannabisumji/)
 [![Telegram](https://img.shields.io/badge/-Telegram-0A192F?style=for-the-badge&logo=telegram&logoColor=64FFDA)](https://t.me/furkannabisumji)
 
-<p><a href="https://github.com/antonkomarev/github-profile-views-counter">
-    <img src="https://komarev.com/ghpvc/?username=furkannabisumji&style=for-the-badge">
-</a></p>
+<br>
+
+<a href="https://github.com/antonkomarev/github-profile-views-counter">
+  <img src="https://komarev.com/ghpvc/?username=furkannabisumji&style=for-the-badge">
+</a>
+
+</div>
