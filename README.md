@@ -1,6 +1,6 @@
 <div align="center">
 
-# Furkan Nabi Sumji | Building Seamless Systems with Purpose
+# Furqaan Nabi | Building Seamless Systems with Purpose
 
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWQ4MWljMno4djB6ZWUxdG9zaHVvZTB2amVxbW9leGFvNXF6ZTNsdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ib6KPmkeAjDTxMxij/giphy.gif" alt="giphy" />
 
