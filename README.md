@@ -19,8 +19,8 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 ## Core Competencies
 
 - **Full-Stack Engineering:** From pixel-perfect React frontends to blazing-fast Node.js backends.
-- **Smart Contracts & Web3:** Solidity, LayerZero, EVM-based chain integrations.
-- **Cloud Infrastructure:** AWS (EC2, ECS, RDS, S3, CloudFront), Docker, Cloudflare R2.
+- **Smart Contracts & Web3:** Solidity, EVM-based chain integrations.
+- **Cloud Infrastructure:** AWS, Docker, Cloudflare R2.
 - **AI & Automation:** GPT-integrated workflows, AI-powered moderation tools, and agent-based architectures.
 - **System Optimization:** High-throughput systems, HLS video streaming, decentralized infra, edge compute.
 
