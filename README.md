@@ -36,7 +36,7 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 | [DealForge](https://github.com/furqaannabi//DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | AI agents negotiate + settle deals on-chain |
 | [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury |
 | [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K GHO) | Tokenized meme economy on Lens |
-| [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($17K) | On-chain reputation protocol |
+| [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($7K) | On-chain reputation protocol |
 | [SAVR](https://github.com/furqaannabi/savr) | 🛠️ Winner — Lens ($2.5K GHO) | Decentralized ROSCA system |
 
 ---
