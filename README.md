@@ -34,25 +34,10 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 |--------|------------|-------------|
 | [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Private settlement layer using CRE |
 | [DealForge](https://github.com/furqaannabi//DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | AI agents negotiate + settle deals on-chain |
-| [ArcFlow](https://github.com/your-repo-link) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury |
+| [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury |
 | [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K GHO) | Tokenized meme economy on Lens |
 | [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($17K) | On-chain reputation protocol |
 | [SAVR](https://github.com/furqaannabi/savr) | 🛠️ Winner — Lens ($2.5K GHO) | Decentralized ROSCA system |
-
----
-
-## Tech Stack
-
-<div align="center">
-
-![Node.js](https://img.shields.io/badge/-Node.js-0A192F?style=for-the-badge&logo=nodedotjs&logoColor=64FFDA)
-![React](https://img.shields.io/badge/-React-0A192F?style=for-the-badge&logo=react&logoColor=64FFDA)
-![Solidity](https://img.shields.io/badge/-Solidity-0A192F?style=for-the-badge&logo=solidity&logoColor=64FFDA)
-![TypeScript](https://img.shields.io/badge/-TypeScript-0A192F?style=for-the-badge&logo=typescript&logoColor=64FFDA)
-![Docker](https://img.shields.io/badge/-Docker-0A192F?style=for-the-badge&logo=docker&logoColor=64FFDA)
-![AWS](https://img.shields.io/badge/-AWS-0A192F?style=for-the-badge&logo=amazon-aws&logoColor=64FFDA)
-
-</div>
 
 ---
 
