@@ -8,27 +8,38 @@
 
 ## About Me
 
-I'm Furqaan, a full-stack developer passionate about building impactful systems across Web2 and Web3. From decentralized meme battle arenas to AI-powered moderation, I aim to build tech that’s resilient, scalable, and usable by millions. I’ve led several projects and love working at the intersection of AI, blockchain, and system design. Let’s build the future.
+I'm Furqaan, a full-stack developer focused on building **high-impact systems across Web2 and Web3**, with a strong emphasis on **infrastructure, privacy, and autonomous systems**.
+
+From private settlement layers to AI-driven protocols, I build systems designed to operate at scale, under pressure, and without reliance on centralized control.
 
 <h3 align="center">
    "Real power comes from building things that just work, again and again, under pressure and at scale."
 </h3>
 
-_Note: This is my personal GitHub profile and may not reflect the full extent of my professional work. For a comprehensive overview, feel free to reach out._
+---
 
 ## Core Competencies
 
-- **Full-Stack Engineering:** From pixel-perfect React frontends to blazing-fast Node.js backends.
-- **Smart Contracts & Web3:** Solidity, EVM-based chain integrations.
-- **Cloud Infrastructure:** AWS, Docker, Cloudflare R2.
-- **AI & Automation:** GPT-integrated workflows, AI-powered moderation tools, and agent-based architectures.
-- **System Optimization:** High-throughput systems, HLS video streaming, decentralized infra, edge compute.
+- **Full-Stack Engineering:** React, Node.js, scalable backend systems  
+- **Smart Contracts & Web3:** Solidity, EVM, cross-chain (CCIP)  
+- **Infrastructure & Systems Design:** High-throughput, decentralized architectures  
+- **AI & Autonomous Systems:** LLM-powered workflows, agent-based execution  
+- **Cloud & DevOps:** AWS, Docker, distributed systems  
 
-## Professional Highlights
+---
 
-- 🥇 Architected and Led **Memed.Fun**, 1st Place Winner of Lens Spring Hackathon, winning **20,000 GHO**
-- 🏆 Co-led **RepCheck**, a Quicknode-powered on-chain reputation system, winning **$17K** from QuickNode.
-- 🛠️ Architected and Led **SAVR**, a decentralized ROSCA platform on Lens Chain, winning **2500 GHO**
+## 🏆 Hackathon Wins
+
+| Project | Achievement | Description |
+|--------|------------|-------------|
+| [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Private settlement layer using CRE |
+| [DealForge](https://github.com/furqaannabi//DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | AI agents negotiate + settle deals on-chain |
+| [ArcFlow](https://github.com/your-repo-link) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury |
+| [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K GHO) | Tokenized meme economy on Lens |
+| [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($17K) | On-chain reputation protocol |
+| [SAVR](https://github.com/furqaannabi/savr) | 🛠️ Winner — Lens ($2.5K GHO) | Decentralized ROSCA system |
+
+---
 
 ## Tech Stack
 
@@ -43,42 +54,7 @@ _Note: This is my personal GitHub profile and may not reflect the full extent of
 
 </div>
 
-<div align="center">
-
-<table>
-<tr>
-<td width="50%" align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=furqaannabi&theme=dark&show_icons=true&count_private=true" />
-  <br><br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=furqaannabi&theme=dark&hide_border=false" />
-</td>
-<td width="50%" align="center">
-  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=furqaannabi&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=7"/>
-</td>
-</tr>
-</table>
-
-</div>
-
-## Featured Projects
-
-1. **[Memed.Fun](https://github.com/furqaannabi/memed)** – *The Social Meme Economy on Lens Chain*  
-   Won 1st place (20,000 GHO) in Lens Spring Hackathon.  
-   - Tokenized meme minting as Lens Profiles  
-   - Token-gated follows/reacts, stake-as-belief  
-   - On-chain meme battles (thread-based) & leaderboards  
-   - Smart contracts for meme ownership, staking, and engagement rewards
-
-2. **[SAVR](https://github.com/furqaannabi/savr)** – *Decentralized ROSCA on Lens Chain*  
-   Built a smart contract-powered Rotating Savings and Credit Association (ROSCA) system.  
-   - Chainlink CCIP for cross-chain fund routing  
-   - Aave-integrated pooled yield
-
-3. **[RepCheck](https://github.com/furqaannabi/repcheck)** – *Quicknode-powered On-chain Reputation*  
-   Quicknode-powered architecture built for QuickNode hackathon.  
-   - Real-time score updates based on wallet behavior  
-   - Staking PYUSD boosts rep; Streams + Functions integration  
-   - Infra: Arbitrum Orbit, Avail DA, and AWS stack
+---
 
 ## 📫 Let's Connect
 
