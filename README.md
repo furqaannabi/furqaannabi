@@ -28,6 +28,24 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 ---
 
+
+<div align="center">
+
+<table>
+<tr>
+<td width="50%" align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=furqaannabi&theme=dark&show_icons=true&count_private=true" />
+  <br><br>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=furqaannabi&theme=dark&hide_border=false" />
+</td>
+<td width="50%" align="center">
+  <img src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=furqaannabi&theme=dark&hide_border=false&no-bg=true&no-frame=true&langs_count=7"/>
+</td>
+</tr>
+</table>
+
+</div>
+
 ## 🏆 Hackathon Wins
 
 | Project | Achievement | Description |
