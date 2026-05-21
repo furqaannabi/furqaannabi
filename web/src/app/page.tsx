@@ -650,7 +650,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-surface-dim dark:bg-surface-dim flex flex-col md:flex-row justify-between items-center w-full px-margin py-4 gap-gutter docked full-width bottom-0 border-t border-outline-variant flat no shadows font-code-sm text-code-sm uppercase z-50 mt-auto">
         <div className="font-label-caps text-label-caps text-outline">
-          ©2024 FURQAAN_NABI
+          © {new Date().getFullYear()} FURQAAN_NABI
 
         </div>
         <div className="flex gap-4 flex-wrap justify-center">
