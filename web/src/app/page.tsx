@@ -108,7 +108,7 @@ export default function Home() {
       {/* TopAppBar */}
       <nav className="bg-surface-dim dark:bg-surface-dim flex justify-between items-center w-full px-margin h-12 docked full-width top-0 border-b border-outline-variant flat no shadows z-50 sticky">
         <div className="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed tracking-widest">
-          FURQAAN_NABI // SYSTEMS_LAB
+          FURQAAN_NABI
         </div>
         <div className="hidden md:flex gap-gutter items-center font-body-md text-body-md md:font-label-caps md:text-label-caps">
           <a
@@ -285,7 +285,7 @@ export default function Home() {
             <div className="absolute top-4 right-4 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
               <span className="font-label-caps text-label-caps text-on-surface-variant">
-                TELEMETRY_ACTIVE
+                ONLINE // OPEN_TO_WORK
               </span>
             </div>
             <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -354,8 +354,8 @@ export default function Home() {
                 </span>
               </div>
               <div className="p-module-padding flex-grow flex flex-col gap-6">
-                <div className="flex justify-between items-start gap-4">
-                  <div>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start items-start gap-3 md:gap-4">
+                  <div className="min-w-0">
                     <h2 className="font-headline-md text-headline-md text-secondary mb-1">
                       SSL — STEALTH SETTLEMENT LAYER
                     </h2>
@@ -364,30 +364,30 @@ export default function Home() {
                       (Privacy Track), Chainlink Convergence ($10K)
                     </p>
                   </div>
-                  <div className="bg-tertiary-fixed-dim/20 text-tertiary border border-tertiary font-label-caps text-label-caps px-2 py-1 uppercase whitespace-nowrap">
+                  <div className="bg-tertiary-fixed-dim/20 text-tertiary border border-tertiary font-label-caps text-label-caps px-2 py-1 uppercase whitespace-nowrap self-start shrink-0">
                     [ STATUS : DEPLOYED ]
                   </div>
                 </div>
 
                 {/* Mini Architecture Diagram Mockup */}
-                <div className="bg-[#0A0A0A] border border-surface-variant p-4 font-code-sm text-code-sm text-on-surface-variant relative">
+                <div className="bg-[#0A0A0A] border border-surface-variant p-4 pt-6 font-code-sm text-code-sm text-on-surface-variant relative overflow-x-auto">
                   <div className="absolute top-2 right-2 text-surface-variant text-xs">
                     ARCH_V1.2
                   </div>
-                  <div className="flex justify-between items-center max-w-md mx-auto my-4">
-                    <div className="border border-outline-variant p-2 text-center w-24">
+                  <div className="flex justify-between items-center gap-2 max-w-md mx-auto my-4 min-w-[420px]">
+                    <div className="border border-outline-variant p-2 text-center w-24 shrink-0">
                       SENDER
                     </div>
-                    <div className="h-px bg-outline-variant w-12 relative">
+                    <div className="h-px bg-outline-variant w-12 relative shrink-0">
                       <span className="absolute right-0 -top-1">►</span>
                     </div>
-                    <div className="border border-secondary text-secondary p-2 text-center w-32 shadow-[0_0_10px_rgba(255,182,147,0.1)]">
+                    <div className="border border-secondary text-secondary p-2 text-center w-32 shadow-[0_0_10px_rgba(255,182,147,0.1)] shrink-0">
                       STEALTH_CRE
                     </div>
-                    <div className="h-px bg-outline-variant w-12 relative">
+                    <div className="h-px bg-outline-variant w-12 relative shrink-0">
                       <span className="absolute right-0 -top-1">►</span>
                     </div>
-                    <div className="border border-outline-variant p-2 text-center w-24">
+                    <div className="border border-outline-variant p-2 text-center w-24 shrink-0">
                       RECEIVER
                     </div>
                   </div>
