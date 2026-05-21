@@ -283,7 +283,7 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-surface-variant"></div>
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-surface-variant"></div>
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-surface-variant"></div>
-            <div className="absolute top-4 right-4 flex items-center gap-2">
+            <div className="flex items-center gap-2 justify-end mb-4 md:mb-0 md:absolute md:top-4 md:right-4">
               <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
               <span className="font-label-caps text-label-caps text-on-surface-variant">
                 ONLINE // OPEN_TO_WORK
