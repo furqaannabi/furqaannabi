@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Furqaan Nabi // Systems Lab",
+  title: "Furqaan Nabi",
   description:
     "Furqaan Nabi — full-stack engineer building high-impact systems across Web2 and Web3, with a focus on infrastructure, privacy, and autonomous systems.",
+  icons: {
+    icon: [
+      { url: "https://github.com/furqaannabi.png?size=32", sizes: "32x32" },
+      { url: "https://github.com/furqaannabi.png?size=192", sizes: "192x192" },
+    ],
+    apple: "https://github.com/furqaannabi.png?size=180",
+    shortcut: "https://github.com/furqaannabi.png?size=64",
+  },
 };
 
 export default function RootLayout({
