@@ -2,6 +2,79 @@
 
 import { useEffect, useRef } from "react";
 
+type Win = {
+  name: string;
+  placement: string;
+  event: string;
+  prize: string;
+  description: string;
+  href: string;
+};
+
+const HACKATHON_WINS: Win[] = [
+  {
+    name: "SSL — Stealth Settlement Layer",
+    placement: "1st Place (Privacy Track)",
+    event: "Chainlink Convergence",
+    prize: "$10K",
+    description: "Private settlement layer using CRE",
+    href: "https://github.com/furqaannabi/ssl",
+  },
+  {
+    name: "DealForge",
+    placement: "2nd Place",
+    event: "Synthesis — EigenCloud Track",
+    prize: "$1K",
+    description: "AI agents negotiate + settle deals on-chain",
+    href: "https://github.com/furqaannabi/DealForge",
+  },
+  {
+    name: "ArcFlow",
+    placement: "Track Winner",
+    event: "ETHGlobal HackMoney — Arc Track",
+    prize: "$2.5K",
+    description: "Yield-generating corporate treasury",
+    href: "https://github.com/furqaannabi/arcflow",
+  },
+  {
+    name: "Memed.Fun",
+    placement: "1st Place",
+    event: "Lens Spring",
+    prize: "$20K GHO",
+    description: "Tokenized meme economy on Lens",
+    href: "https://github.com/furqaannabi/memed",
+  },
+  {
+    name: "RepCheck",
+    placement: "Winner",
+    event: "QuickNode",
+    prize: "$7K",
+    description: "On-chain reputation protocol",
+    href: "https://github.com/furqaannabi/repcheck",
+  },
+  {
+    name: "SAVR",
+    placement: "Winner",
+    event: "Lens",
+    prize: "$2.5K GHO",
+    description: "Decentralized ROSCA system",
+    href: "https://github.com/furqaannabi/savr",
+  },
+];
+
+function parsePrizeK(prize: string): number {
+  const match = prize.match(/\$([0-9]+(?:\.[0-9]+)?)\s*K/i);
+  return match ? parseFloat(match[1]) : 0;
+}
+
+function formatTotalPrize(wins: Win[]): string {
+  const total = wins.reduce((sum, w) => sum + parsePrizeK(w.prize), 0);
+  const rounded = Number.isInteger(total) ? total.toString() : total.toFixed(1);
+  return `$${rounded}K`;
+}
+
+const TOTAL_PRIZE_DISPLAY = formatTotalPrize(HACKATHON_WINS);
+
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -535,61 +608,11 @@ export default function Home() {
                   SYS_02 // HACKATHON_WINS
                 </span>
                 <span className="font-label-caps text-label-caps text-tertiary">
-                  TOTAL_PRIZE ~ $42.5K
+                  TOTAL_PRIZE ~ {TOTAL_PRIZE_DISPLAY}
                 </span>
               </div>
               <div className="p-module-padding grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-                {[
-                  {
-                    name: "SSL — Stealth Settlement Layer",
-                    placement: "1st Place (Privacy Track)",
-                    event: "Chainlink Convergence",
-                    prize: "$10K",
-                    description: "Private settlement layer using CRE",
-                    href: "https://github.com/furqaannabi/ssl",
-                  },
-                  {
-                    name: "DealForge",
-                    placement: "2nd Place",
-                    event: "Synthesis — EigenCloud Track",
-                    prize: "$1K",
-                    description:
-                      "AI agents negotiate + settle deals on-chain",
-                    href: "https://github.com/furqaannabi/DealForge",
-                  },
-                  {
-                    name: "ArcFlow",
-                    placement: "Track Winner",
-                    event: "ETHGlobal HackMoney — Arc Track",
-                    prize: "$2.5K",
-                    description: "Yield-generating corporate treasury",
-                    href: "https://github.com/furqaannabi/arcflow",
-                  },
-                  {
-                    name: "Memed.Fun",
-                    placement: "1st Place",
-                    event: "Lens Spring",
-                    prize: "$20K GHO",
-                    description: "Tokenized meme economy on Lens",
-                    href: "https://github.com/furqaannabi/memed",
-                  },
-                  {
-                    name: "RepCheck",
-                    placement: "Winner",
-                    event: "QuickNode",
-                    prize: "$7K",
-                    description: "On-chain reputation protocol",
-                    href: "https://github.com/furqaannabi/repcheck",
-                  },
-                  {
-                    name: "SAVR",
-                    placement: "Winner",
-                    event: "Lens",
-                    prize: "$2.5K GHO",
-                    description: "Decentralized ROSCA system",
-                    href: "https://github.com/furqaannabi/savr",
-                  },
-                ].map((win) => (
+                {HACKATHON_WINS.map((win) => (
                   <a
                     key={win.name}
                     href={win.href}
