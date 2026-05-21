@@ -301,47 +301,6 @@ export default function Home() {
               METRICS
             </a>
           </nav>
-          <div className="mt-auto px-module-padding pb-4 border-b border-surface-variant mb-4">
-            <a
-              href="mailto:hi@furqaannabi.com"
-              className="block w-full text-left font-label-caps text-label-caps text-secondary hover:text-white transition-colors blinking-cursor"
-            >
-              [ OPEN_COMMS ]
-            </a>
-            <div className="font-code-sm text-code-sm text-outline mt-2 break-all">
-              hi@furqaannabi.com
-            </div>
-          </div>
-          <nav className="flex flex-col gap-2">
-            <a
-              className="text-on-surface-variant flex items-center gap-2 p-2 mx-2 hover:bg-surface-container-highest transition-all duration-75 active:translate-x-1"
-              href="https://github.com/furqaannabi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span
-                className="material-symbols-outlined text-lg"
-                style={{ fontVariationSettings: "'FILL' 0" }}
-              >
-                code
-              </span>{" "}
-              GITHUB
-            </a>
-            <a
-              className="text-on-surface-variant flex items-center gap-2 p-2 mx-2 hover:bg-surface-container-highest transition-all duration-75 active:translate-x-1"
-              href="https://www.linkedin.com/in/furqaannabi/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span
-                className="material-symbols-outlined text-lg"
-                style={{ fontVariationSettings: "'FILL' 0" }}
-              >
-                person
-              </span>{" "}
-              LINKEDIN
-            </a>
-          </nav>
         </aside>
 
         {/* Main Content Area */}
