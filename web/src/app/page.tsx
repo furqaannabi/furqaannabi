@@ -330,10 +330,10 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="hidden md:block w-64 h-64 border border-surface-variant p-2 bg-[#0A0A0A]">
+              <div className="w-40 h-40 md:w-64 md:h-64 mx-auto md:mx-0 order-first md:order-none border border-surface-variant p-2 bg-[#0A0A0A] shrink-0">
                 <img
-                  src="/images/hero.gif"
-                  alt="Hero Animation"
+                  src="https://github.com/furqaannabi.png?size=512"
+                  alt="Furqaan Nabi"
                   className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 />
               </div>
