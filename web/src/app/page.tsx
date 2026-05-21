@@ -230,13 +230,14 @@ export default function Home() {
           </nav>
           <div className="mt-auto px-module-padding pb-4 border-b border-surface-variant mb-4">
             <a
-              href="https://x.com/0xfurqaan"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:hi@furqaannabi.com"
               className="block w-full text-left font-label-caps text-label-caps text-secondary hover:text-white transition-colors blinking-cursor"
             >
               [ OPEN_COMMS ]
             </a>
+            <div className="font-code-sm text-code-sm text-outline mt-2 break-all">
+              hi@furqaannabi.com
+            </div>
           </div>
           <nav className="flex flex-col gap-2">
             <a
@@ -322,9 +323,7 @@ export default function Home() {
                     [ Hackathon Wins ]
                   </a>
                   <a
-                    href="https://x.com/0xfurqaan"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:hi@furqaannabi.com"
                     className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
                   >
                     [ Contact ]
@@ -685,6 +684,12 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             TELEGRAM
+          </a>
+          <a
+            className="text-outline hover:text-secondary hover:underline underline-offset-4 transition-opacity duration-150"
+            href="mailto:hi@furqaannabi.com"
+          >
+            EMAIL
           </a>
         </div>
       </footer>
