@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface-dim: #131313;
+  --color-secondary: #ffb693;
+  --color-inverse-surface: #e5e2e1;
+  --color-secondary-fixed-dim: #ffb693;
+  --color-on-secondary-container: #572000;
+  --color-error: #ffb4ab;
+  --color-inverse-on-surface: #313030;
+  --color-surface-bright: #393939;
+  --color-on-secondary-fixed: #351000;
+  --color-surface-variant: #353535;
+  --color-on-primary-fixed-variant: #474646;
+  --color-on-tertiary-fixed: #002203;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-surface: #e5e2e1;
+  --color-primary-fixed-dim: #c9c6c5;
+  --color-tertiary-container: #000700;
+  --color-primary-fixed: #e5e2e1;
+  --color-surface-container-low: #1c1b1b;
+  --color-on-secondary-fixed-variant: #7a3000;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-primary-container: #050505;
+  --color-primary: #c9c6c5;
+  --color-surface-container-highest: #353535;
+  --color-tertiary: #00e639;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-on-surface-variant: #c4c7c7;
+  --color-secondary-fixed: #ffdbcc;
+  --color-on-background: #e5e2e1;
+  --color-surface-tint: #c9c6c5;
+  --color-outline-variant: #444748;
+  --color-on-tertiary-container: #008b1e;
+  --color-inverse-primary: #5f5e5e;
+  --color-tertiary-fixed: #72ff70;
+  --color-on-primary-container: #797777;
+  --color-surface-container-high: #2a2a2a;
+  --color-outline: #8e9192;
+  --color-surface: #131313;
+  --color-background: #131313;
+  --color-on-secondary: #561f00;
+  --color-surface-container: #20201f;
+  --color-on-tertiary-fixed-variant: #00530e;
+  --color-tertiary-fixed-dim: #00e639;
+  --color-on-error-container: #ffdad6;
+  --color-on-primary: #313030;
+  --color-on-tertiary: #003907;
+  --color-secondary-container: #fe6b00;
+
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --spacing-unit: 4px;
+  --spacing-breakpoint-md: 768px;
+  --spacing-margin: 32px;
+  --spacing-module-padding: 24px;
+  --spacing-gutter: 16px;
+  --spacing-breakpoint-lg: 1200px;
+
+  --font-headline-md: "Hanken Grotesk";
+  --font-headline-lg: "Hanken Grotesk";
+  --font-headline-sm: "Hanken Grotesk";
+  --font-label-caps: "JetBrains Mono";
+  --font-code-sm: "JetBrains Mono";
+  --font-body-lg: "JetBrains Mono";
+  --font-body-md: "JetBrains Mono";
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.2;
+  --text-headline-md--letter-spacing: -0.02em;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 1.1;
+  --text-headline-lg--letter-spacing: -0.04em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 1.4;
+  --text-headline-sm--font-weight: 600;
+
+  --text-label-caps: 10px;
+  --text-label-caps--line-height: 1.2;
+  --text-label-caps--letter-spacing: 0.1em;
+  --text-label-caps--font-weight: 700;
+
+  --text-code-sm: 12px;
+  --text-code-sm--line-height: 1.5;
+  --text-code-sm--font-weight: 500;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+}
+
+@source "./**/*.{js,ts,jsx,tsx}";
+
+@layer base {
+  body {
+    color: #e5e2e1;
+    background-color: #131313;
+    position: relative;
+  }
+  body:before {
+    content: " ";
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.15;
+    background: linear-gradient(#12101000 50%, #00000040 50%) 0 0/100% 2px,
+      linear-gradient(90deg, #ff00000f, #00ff0005, #0000ff0f) 0 0/3px 100%;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+@layer components {
+  .bg-grid {
+    opacity: 0.05;
+    background-image: linear-gradient(90deg, #444748 1px, transparent 1px),
+      linear-gradient(#444748 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .module-border {
+    border: 1px solid #353535;
+  }
+  .terminal-button {
+    border: 1px solid #353535;
+    transition: all 0.2s;
+  }
+  .terminal-button:hover {
+    color: #131313;
+    background-color: #ffb693;
+    border-color: #ffb693;
+  }
+  .blinking-cursor:after {
+    content: "_";
+    animation: 1s step-end infinite blink;
+  }
+}
+
+@keyframes blink {
+  0%,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#telemetry-canvas {
+  z-index: -1;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
