@@ -167,18 +167,6 @@ export default function Home() {
                 </blockquote>
                 <div className="flex flex-wrap gap-4 mt-2">
                   <a
-                    href="#systems"
-                    className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
-                  >
-                    [ View Systems ]
-                  </a>
-                  <a
-                    href="#hackathons"
-                    className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
-                  >
-                    [ Hackathon Wins ]
-                  </a>
-                  <a
                     href="mailto:hi@furqaannabi.com"
                     className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
                   >
