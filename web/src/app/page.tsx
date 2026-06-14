@@ -109,14 +109,9 @@ export default function Home() {
           </a>
         </div>
         <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
           <span className="font-label-caps text-label-caps text-tertiary">
             STATUS: ONLINE
-          </span>
-          <span
-            className="material-symbols-outlined text-tertiary"
-            style={{ fontVariationSettings: "'FILL' 0" }}
-          >
-            schedule
           </span>
         </div>
       </nav>
@@ -142,9 +137,7 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-surface-variant"></div>
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-surface-variant"></div>
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-surface-variant"></div>
-            <div className="flex items-center gap-2 justify-end mb-4 md:mb-0 md:absolute md:top-4 md:right-4">
-              <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-            </div>
+
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
                 <div className="font-label-caps text-label-caps text-secondary mb-3 tracking-widest">
