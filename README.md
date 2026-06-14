@@ -28,6 +28,12 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 ---
 
+## Education
+
+- **Bachelor of Computer Applications (Fintech and AI)** — Amity University (Expected 2028)
+
+---
+
 
 <div align="center">
 
@@ -48,14 +54,14 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 ## 🏆 Hackathon Wins
 
-| Project | Achievement | Description |
-|--------|------------|-------------|
-| [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Private settlement layer using CRE |
-| [DealForge](https://github.com/furqaannabi//DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | AI agents negotiate + settle deals on-chain |
-| [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury |
-| [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K GHO) | Tokenized meme economy on Lens |
-| [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($7K) | On-chain reputation protocol |
-| [SAVR](https://github.com/furqaannabi/savr) | 🛠️ Winner — Lens ($2.5K GHO) | Decentralized ROSCA system |
+| Project | Achievement | Description | Proof |
+|--------|------------|-------------|-------|
+| [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Private settlement layer using CRE | [Link](https://blog.chain.link/convergence-hackathon-winners/) |
+| [DealForge](https://github.com/furqaannabi/DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | AI agents negotiate + settle deals on-chain | [Link](https://synthesis.md/projects/#project/dealforge-9b3f) |
+| [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Yield-generating corporate treasury | [Link](https://ethglobal.com/showcase/arcflow-rwysr) |
+| [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K GHO) | Tokenized meme economy on Lens | [Link](https://x.com/i/status/1929966819940676062) |
+| [RepCheck](https://github.com/furqaannabi/repcheck) | 🏆 Winner — QuickNode ($7K) | On-chain reputation protocol | [Link](https://devfolio.co/projects/repcheck-0e48) |
+| [SAVR](https://github.com/furqaannabi/savr) | 🛠️ Winner — Lens ($2.5K GHO) | Decentralized ROSCA system | [Link](https://x.com/i/status/1879908057700016179) |
 
 ---
 

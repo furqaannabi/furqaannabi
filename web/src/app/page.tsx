@@ -7,6 +7,7 @@ type Win = {
   prize: string;
   description: string;
   href: string;
+  proof?: string;
 };
 
 const HACKATHON_WINS: Win[] = [
@@ -17,6 +18,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$10K",
     description: "Private settlement layer using CRE",
     href: "https://github.com/furqaannabi/ssl",
+    proof: "https://blog.chain.link/convergence-hackathon-winners/",
   },
   {
     name: "DealForge",
@@ -25,6 +27,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$1K",
     description: "AI agents negotiate + settle deals on-chain",
     href: "https://github.com/furqaannabi/DealForge",
+    proof: "https://synthesis.md/projects/#project/dealforge-9b3f",
   },
   {
     name: "ArcFlow",
@@ -33,6 +36,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$2.5K",
     description: "Yield-generating corporate treasury",
     href: "https://github.com/furqaannabi/arcflow",
+    proof: "https://ethglobal.com/showcase/arcflow-rwysr",
   },
   {
     name: "Memed.Fun",
@@ -41,6 +45,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$20K GHO",
     description: "Tokenized meme economy on Lens",
     href: "https://github.com/furqaannabi/memed",
+    proof: "https://x.com/i/status/1929966819940676062",
   },
   {
     name: "RepCheck",
@@ -49,6 +54,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$7K",
     description: "On-chain reputation protocol",
     href: "https://github.com/furqaannabi/repcheck",
+    proof: "https://devfolio.co/projects/repcheck-0e48",
   },
   {
     name: "SAVR",
@@ -57,6 +63,7 @@ const HACKATHON_WINS: Win[] = [
     prize: "$2.5K GHO",
     description: "Decentralized ROSCA system",
     href: "https://github.com/furqaannabi/savr",
+    proof: "https://x.com/i/status/1879908057700016179",
   },
 ];
 
@@ -367,7 +374,7 @@ export default function Home() {
                     [ SOURCE ]
                   </a>
                   <span className="font-label-caps text-label-caps text-outline self-center">
-                    AWARD // CHAINLINK_CONVERGENCE_2024
+                    AWARD // CHAINLINK_CONVERGENCE_2026
                   </span>
                 </div>
               </div>
@@ -445,6 +452,17 @@ export default function Home() {
                       </span>
                     </div>
                   </li>
+                  <li className="flex gap-2">
+                    <span className="text-secondary opacity-50">&gt;</span>
+                    <div>
+                      <span className="text-outline text-xs block mb-1">
+                        EDU_01 // AMITY_UNIVERSITY
+                      </span>
+                      <span className="text-on-surface">
+                        Bachelor of Computer Applications (Fintech and AI) — Expected 2028
+                      </span>
+                    </div>
+                  </li>
                   <li className="flex gap-2 opacity-50">
                     <span className="text-secondary blinking-cursor">&gt;</span>
                     <span className="text-surface-variant">
@@ -470,12 +488,9 @@ export default function Home() {
               </div>
               <div className="p-module-padding grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
                 {HACKATHON_WINS.map((win) => (
-                  <a
+                  <div
                     key={win.name}
-                    href={win.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="module-border bg-[#0A0A0A] p-4 flex flex-col gap-3 hover:border-secondary transition-colors group"
+                    className="module-border bg-[#0A0A0A] p-4 flex flex-col gap-3 group"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="font-headline-sm text-headline-sm text-secondary group-hover:text-white transition-colors">
@@ -491,10 +506,17 @@ export default function Home() {
                     <p className="font-body-md text-body-md text-on-surface text-sm">
                       {win.description}
                     </p>
-                    <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline group-hover:text-secondary transition-colors">
-                      [ VIEW_SOURCE ►
+                    <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex gap-4">
+                      <a href={win.href} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                        [ VIEW_SOURCE ]
+                      </a>
+                      {win.proof && (
+                        <a href={win.proof} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                          [ PROOF ]
+                        </a>
+                      )}
                     </div>
-                  </a>
+                  </div>
                 ))}
               </div>
             </section>
