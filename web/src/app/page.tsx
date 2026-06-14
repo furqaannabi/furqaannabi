@@ -439,30 +439,6 @@ export default function Home() {
                 ))}
               </div>
             </section>
-
-            {/* GitHub Stats Section */}
-            <section
-              id="metrics"
-              className="md:col-span-12 module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col mt-4 scroll-mt-16"
-            >
-              <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low">
-                <span className="font-label-caps text-label-caps text-on-surface-variant">
-                  SYS_03 // GITHUB_METRICS
-                </span>
-              </div>
-              <div className="p-module-padding flex-grow flex flex-col md:flex-row gap-6 justify-center items-center">
-                <img
-                  src="/images/streak.svg"
-                  alt="GitHub Streak"
-                  className="w-full max-w-md"
-                />
-                <img
-                  src="/images/top-langs.svg"
-                  alt="Top Languages"
-                  className="w-full max-w-md"
-                />
-              </div>
-            </section>
           </div>
         </div>
       </main>
