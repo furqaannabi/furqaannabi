@@ -97,21 +97,15 @@ export default function Home() {
           </a>
           <a
             className="text-on-surface-variant hover:text-secondary transition-colors active:opacity-80 transition-all"
-            href="#systems"
+            href="#competencies"
           >
-            SYSTEMS
+            COMPETENCIES
           </a>
           <a
             className="text-on-surface-variant hover:text-secondary transition-colors active:opacity-80 transition-all"
             href="#hackathons"
           >
             HACKATHONS
-          </a>
-          <a
-            className="text-on-surface-variant hover:text-secondary transition-colors active:opacity-80 transition-all"
-            href="#competencies"
-          >
-            COMPETENCIES
           </a>
         </div>
         <div className="flex items-center gap-2">
@@ -150,9 +144,6 @@ export default function Home() {
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-surface-variant"></div>
             <div className="flex items-center gap-2 justify-end mb-4 md:mb-0 md:absolute md:top-4 md:right-4">
               <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
-              <span className="font-label-caps text-label-caps text-on-surface-variant">
-                ONLINE // OPEN_TO_WORK
-              </span>
             </div>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
