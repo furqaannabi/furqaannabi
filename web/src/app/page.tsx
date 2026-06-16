@@ -6,6 +6,7 @@ type Win = {
   event: string;
   prize: string;
   description: string;
+  stack: string[];
   href: string;
   proof?: string;
 };
@@ -16,7 +17,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "1st Place (Privacy Track)",
     event: "Chainlink Convergence",
     prize: "$10K",
-    description: "Private settlement layer using CRE",
+    description:
+      "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private settlement.",
+    stack: ["SOLIDITY", "CHAINLINK_CRE", "WORLD_ID", "ACE", "TEE"],
     href: "https://github.com/furqaannabi/ssl",
     proof: "https://blog.chain.link/convergence-hackathon-winners/",
   },
@@ -25,7 +28,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "2nd Place",
     event: "Synthesis — EigenCloud Track",
     prize: "$1K",
-    description: "AI agents negotiate + settle deals on-chain",
+    description:
+      "Trustless protocol where AI agents negotiate, escrow funds, and settle deals on-chain — LLM-driven negotiation with a TEE-attested verifier network on Base, no human in the loop.",
+    stack: ["SOLIDITY", "BASE", "LLM", "TEE"],
     href: "https://github.com/furqaannabi/DealForge",
     proof: "https://synthesis.md/projects/#project/dealforge-9b3f",
   },
@@ -34,7 +39,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "Track Winner",
     event: "ETHGlobal HackMoney — Arc Track",
     prize: "$2.5K",
-    description: "Yield-generating corporate treasury",
+    description:
+      "Cross-chain payroll with yield — idle USDC earns via Uniswap V4 LP positions, then an AI agent auto-bridges payouts through Circle Gateway to Arc Chain on payday.",
+    stack: ["SOLIDITY", "UNISWAP_V4", "CIRCLE_GATEWAY", "ENS"],
     href: "https://github.com/furqaannabi/arcflow",
     proof: "https://ethglobal.com/showcase/arcflow-rwysr",
   },
@@ -43,7 +50,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "1st Place",
     event: "Lens Spring",
     prize: "$20K",
-    description: "Tokenized meme economy on Lens",
+    description:
+      "Creators mint their own meme tokens, battle for supremacy on Lens, and reward communities through a staking and engagement-rewards ecosystem.",
+    stack: ["SOLIDITY", "LENS", "NODE.JS", "THE_GRAPH", "IPFS"],
     href: "https://github.com/furqaannabi/memed",
     proof: "https://x.com/i/status/1929966819940676062",
   },
@@ -52,7 +61,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "Winner",
     event: "QuickNode",
     prize: "$7K",
-    description: "On-chain reputation protocol",
+    description:
+      "On-chain DeFi reputation protocol on RepChain (an Avail rollup) — tracks Uniswap/Aave activity in real time via QuickNode Streams & Functions, with PYUSD staking multipliers.",
+    stack: ["SOLIDITY", "QUICKNODE", "AVAIL", "PYUSD"],
     href: "https://github.com/furqaannabi/repcheck",
     proof: "https://devfolio.co/projects/repcheck-0e48",
   },
@@ -61,7 +72,9 @@ const HACKATHON_WINS: Win[] = [
     placement: "Winner",
     event: "Lens",
     prize: "$2.5K",
-    description: "Decentralized ROSCA system",
+    description:
+      "Decentralized ROSCA for group savings — smart contracts pool contributions, earn yield via Aave, and coordinate disbursements cross-chain over Chainlink CCIP.",
+    stack: ["SOLIDITY", "AAVE", "CHAINLINK_CCIP", "LENS_CHAIN"],
     href: "https://github.com/furqaannabi/savr",
     proof: "https://x.com/i/status/1879908057700016179",
   },
@@ -203,7 +216,7 @@ export default function Home() {
                       SSL — STEALTH SETTLEMENT LAYER
                     </h2>
                     <p className="font-body-md text-body-md text-on-surface-variant">
-                      Private settlement layer using Chainlink CRE — 1st Place
+                      Privacy-preserving dark pool for tokenized RWAs — 1st Place
                       (Privacy Track), Chainlink Convergence ($10K)
                     </p>
                   </div>
@@ -249,13 +262,13 @@ export default function Home() {
                         CHAINLINK_CRE
                       </span>
                       <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        EVM
+                        WORLD_ID
                       </span>
                       <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        CCIP
+                        ACE
                       </span>
                       <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        REACT
+                        TEE
                       </span>
                     </div>
                   </div>
@@ -264,9 +277,10 @@ export default function Home() {
                       SYS_OBJECTIVE
                     </div>
                     <p className="font-body-md text-body-md text-on-surface text-sm">
-                      Enable privacy-preserving settlement for digital value
-                      transfer — recipients stay stealthed while transactions
-                      remain verifiable across chains.
+                      Give institutional traders a sybil-resistant dark pool:
+                      orders are matched confidentially inside a Chainlink CRE
+                      TEE while compliance stays enforced on-chain via World ID
+                      and ACE.
                     </p>
                   </div>
                 </div>
@@ -413,7 +427,17 @@ export default function Home() {
                     <p className="font-body-md text-body-md text-on-surface text-sm">
                       {win.description}
                     </p>
-                    <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex gap-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {win.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px]"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4">
                       <a href={win.href} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                         [ VIEW_SOURCE ]
                       </a>
