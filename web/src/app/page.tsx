@@ -165,6 +165,13 @@ export default function Home() {
                   >
                     [ Contact ]
                   </a>
+                  <a
+                    href="/furqaan-nabi-cv.pdf"
+                    download
+                    className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
+                  >
+                    [ Download CV ]
+                  </a>
                 </div>
               </div>
               <div className="w-40 h-40 md:w-64 md:h-64 mx-auto md:mx-0 order-first md:order-none border border-surface-variant p-2 bg-[#0A0A0A] shrink-0">

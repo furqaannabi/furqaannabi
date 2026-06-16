@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Furqaan Nabi — Curriculum Vitae</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --body: #333333;
+    --muted: #666666;
+    --line: #d8d8d8;
+    --accent: #1f3a5f;
+    --bg: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 10.5px;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 18mm 18mm 16mm;
+    background: var(--bg);
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+  }
+  .avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .name {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .role {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-top: 3px;
+    font-style: italic;
+  }
+  .contact {
+    margin-top: 8px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 9px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 14px;
+  }
+  .contact a { color: var(--muted); text-decoration: none; }
+  .contact .sep { color: var(--line); }
+
+  /* Section */
+  section { margin-top: 16px; }
+  .sec-title {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    margin-bottom: 9px;
+  }
+
+  .summary { font-size: 10.5px; line-height: 1.6; color: var(--body); }
+
+  /* Two-column layout */
+  .grid-2 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; }
+
+  /* Competencies */
+  .comp-list { list-style: none; }
+  .comp-list li { margin-bottom: 7px; display: flex; gap: 8px; }
+  .comp-list li::before {
+    content: "▪";
+    color: var(--accent);
+    font-size: 8px;
+    line-height: 1.7;
+  }
+  .comp-label { font-weight: 700; color: var(--ink); }
+
+  /* Education / skills */
+  .edu .deg { font-weight: 700; color: var(--ink); font-size: 11px; }
+  .edu .inst { color: var(--body); }
+  .edu .date { color: var(--muted); font-style: italic; font-size: 9.5px; }
+
+  .skills { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 9.5px; color: var(--body); line-height: 1.7; margin-top: 10px; }
+  .skills .h { display:block; font-weight:700; color: var(--ink); text-transform: uppercase; letter-spacing: 0.1em; font-size: 9px; margin-bottom: 2px; }
+
+  /* Projects / Awards */
+  .award { margin-bottom: 11px; }
+  .award-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .award-name { font-weight: 700; color: var(--ink); font-size: 11.5px; }
+  .award-prize {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .award-meta { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 9px; color: var(--muted); margin: 1px 0 2px; }
+  .award-desc { font-size: 10px; color: var(--body); }
+
+  .awards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
+
+  footer {
+    margin-top: 18px;
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 8.5px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @page { size: A4; margin: 0; }
+  @media print { .page { margin: 0; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="avatar">
+      <img src="https://github.com/furqaannabi.png?size=256" alt="Furqaan Nabi" />
+    </div>
+    <div>
+      <div class="name">Furqaan Nabi</div>
+      <div class="role">Full-Stack Engineer — Infrastructure, Privacy &amp; Autonomous Systems</div>
+      <div class="contact">
+        <a href="mailto:hi@furqaannabi.com">hi@furqaannabi.com</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/furqaannabi">github.com/furqaannabi</a>
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/furqaannabi/">linkedin.com/in/furqaannabi</a>
+        <span class="sep">|</span>
+        <a href="https://x.com/0xfurqaan">x.com/0xfurqaan</a>
+        <span class="sep">|</span>
+        <a href="https://furqaannabi.com">furqaannabi.com</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-title">Professional Summary</div>
+    <p class="summary">
+      Full-stack engineer focused on infrastructure, privacy, and autonomous systems. Experienced in building
+      everything from private settlement layers to AI-driven protocols, with an emphasis on systems designed to
+      operate at scale, under pressure, and without reliance on centralized control. Multiple-time hackathon
+      winner with over $43K in combined prizes across leading Web3 ecosystems.
+    </p>
+  </section>
+
+  <div class="grid-2">
+    <section>
+      <div class="sec-title">Core Competencies</div>
+      <ul class="comp-list">
+        <li><span><span class="comp-label">Full-Stack Engineering.</span> React, Node.js, and scalable backend systems.</span></li>
+        <li><span><span class="comp-label">Smart Contracts &amp; Web3.</span> Solidity, EVM, and cross-chain development (CCIP).</span></li>
+        <li><span><span class="comp-label">Infrastructure &amp; Systems Design.</span> High-throughput, decentralized architectures.</span></li>
+        <li><span><span class="comp-label">AI &amp; Autonomous Systems.</span> LLM-powered workflows and agent-based execution.</span></li>
+        <li><span><span class="comp-label">Cloud &amp; DevOps.</span> AWS, Docker, and distributed systems.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-title">Education</div>
+      <div class="edu">
+        <div class="deg">Bachelor of Computer Applications</div>
+        <div class="inst">Fintech &amp; AI — Amity University</div>
+        <div class="date">Expected 2028</div>
+      </div>
+      <div class="skills">
+        <span class="h">Technical Skills</span>
+        Solidity · React · Node.js · EVM · CCIP · Chainlink CRE · AWS · Docker
+      </div>
+    </section>
+  </div>
+
+  <section>
+    <div class="sec-title">Selected Projects &amp; Awards</div>
+    <div class="awards-grid">
+      <div class="award">
+        <div class="award-head"><span class="award-name">SSL — Stealth Settlement Layer</span><span class="award-prize">$10K</span></div>
+        <div class="award-meta">1st Place, Privacy Track — Chainlink Convergence</div>
+        <div class="award-desc">Private settlement layer built with Chainlink CRE, enabling privacy-preserving value transfer verifiable across chains.</div>
+      </div>
+      <div class="award">
+        <div class="award-head"><span class="award-name">Memed.Fun</span><span class="award-prize">$20K</span></div>
+        <div class="award-meta">1st Place — Lens Spring</div>
+        <div class="award-desc">Tokenized meme economy built on the Lens protocol.</div>
+      </div>
+      <div class="award">
+        <div class="award-head"><span class="award-name">RepCheck</span><span class="award-prize">$7K</span></div>
+        <div class="award-meta">Winner — QuickNode</div>
+        <div class="award-desc">On-chain reputation protocol for verifiable trust scoring.</div>
+      </div>
+      <div class="award">
+        <div class="award-head"><span class="award-name">ArcFlow</span><span class="award-prize">$2.5K</span></div>
+        <div class="award-meta">Track Winner — ETHGlobal HackMoney (Arc)</div>
+        <div class="award-desc">Yield-generating corporate treasury management system.</div>
+      </div>
+      <div class="award">
+        <div class="award-head"><span class="award-name">SAVR</span><span class="award-prize">$2.5K</span></div>
+        <div class="award-meta">Winner — Lens</div>
+        <div class="award-desc">Decentralized rotating savings and credit association (ROSCA) system.</div>
+      </div>
+      <div class="award">
+        <div class="award-head"><span class="award-name">DealForge</span><span class="award-prize">$1K</span></div>
+        <div class="award-meta">2nd Place — Synthesis (EigenCloud Track)</div>
+        <div class="award-desc">AI agents that autonomously negotiate and settle deals on-chain.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Furqaan Nabi — Curriculum Vitae</span>
+    <span>Total hackathon prizes: $43K+</span>
+  </footer>
+
+</div>
+</body>
+</html>
