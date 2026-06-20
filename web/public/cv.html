@@ -32,6 +32,8 @@
     margin: 0 auto;
     padding: 18mm 18mm 16mm;
     background: var(--bg);
+    display: flex;
+    flex-direction: column;
   }
 
   /* Header */
@@ -133,14 +135,14 @@
   .awards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
 
   footer {
-    margin-top: 18px;
+    margin-top: auto;
     border-top: 1px solid var(--line);
     padding-top: 8px;
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 8.5px;
     color: var(--muted);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   @page { size: A4; margin: 0; }
@@ -177,7 +179,7 @@
       Full-stack engineer focused on infrastructure, privacy, and autonomous systems. Experienced in building
       everything from private settlement layers to AI-driven protocols, with an emphasis on systems designed to
       operate at scale, under pressure, and without reliance on centralized control. Multiple-time hackathon
-      winner with over $43K in combined prizes across leading Web3 ecosystems.
+      winner across leading Web3 ecosystems.
     </p>
   </section>
 
@@ -245,7 +247,6 @@
 
   <footer>
     <span>Furqaan Nabi — Curriculum Vitae</span>
-    <span>Total hackathon prizes: $43K+</span>
   </footer>
 
 </div>
