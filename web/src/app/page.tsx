@@ -62,18 +62,6 @@ const HACKATHON_WINS: Win[] = [
     proof: "https://x.com/i/status/1929966819940676062",
   },
   {
-    name: "RepCheck",
-    placement: "2nd Place",
-    event: "QuickNode Build On",
-    date: "Nov 2024",
-    prize: "$7K",
-    description:
-      "On-chain DeFi reputation protocol on RepChain (an Avail rollup) — tracks Uniswap/Aave activity in real time via QuickNode Streams & Functions, with PYUSD staking multipliers.",
-    stack: ["SOLIDITY", "QUICKNODE", "AVAIL", "PYUSD"],
-    href: "https://github.com/furqaannabi/repcheck",
-    proof: "https://devfolio.co/projects/repcheck-0e48",
-  },
-  {
     name: "SAVR",
     placement: "Honorable Mention",
     event: "Lens Holiday",
@@ -84,6 +72,18 @@ const HACKATHON_WINS: Win[] = [
     stack: ["SOLIDITY", "AAVE", "CHAINLINK_CCIP", "LENS_CHAIN"],
     href: "https://github.com/furqaannabi/savr",
     proof: "https://x.com/i/status/1879908057700016179",
+  },
+  {
+    name: "RepCheck",
+    placement: "2nd Place",
+    event: "QuickNode Build On",
+    date: "Nov 2024",
+    prize: "$7K",
+    description:
+      "On-chain DeFi reputation protocol on RepChain (an Avail rollup) — tracks Uniswap/Aave activity in real time via QuickNode Streams & Functions, with PYUSD staking multipliers.",
+    stack: ["SOLIDITY", "QUICKNODE", "AVAIL", "PYUSD"],
+    href: "https://github.com/furqaannabi/repcheck",
+    proof: "https://devfolio.co/projects/repcheck-0e48",
   },
 ];
 
