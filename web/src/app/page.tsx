@@ -180,10 +180,11 @@ export default function Home() {
                   </a>
                   <a
                     href="/furqaan-nabi-cv.pdf"
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
                   >
-                    [ Download CV ]
+                    [ View CV ]
                   </a>
                 </div>
               </div>
