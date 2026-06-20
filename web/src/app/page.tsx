@@ -4,6 +4,7 @@ type Win = {
   name: string;
   placement: string;
   event: string;
+  date: string;
   prize: string;
   description: string;
   stack: string[];
@@ -16,6 +17,7 @@ const HACKATHON_WINS: Win[] = [
     name: "SSL — Stealth Settlement Layer",
     placement: "1st Place (Privacy Track)",
     event: "Chainlink Convergence",
+    date: "Mar 2026",
     prize: "$10K",
     description:
       "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private settlement.",
@@ -27,6 +29,7 @@ const HACKATHON_WINS: Win[] = [
     name: "DealForge",
     placement: "2nd Place",
     event: "Synthesis — EigenCloud Track",
+    date: "Apr 2026",
     prize: "$1K",
     description:
       "Trustless protocol where AI agents negotiate, escrow funds, and settle deals on-chain — LLM-driven negotiation with a TEE-attested verifier network on Base, no human in the loop.",
@@ -38,6 +41,7 @@ const HACKATHON_WINS: Win[] = [
     name: "ArcFlow",
     placement: "Track Winner",
     event: "ETHGlobal HackMoney — Arc Track",
+    date: "Feb 2026",
     prize: "$2.5K",
     description:
       "Cross-chain payroll with yield — idle USDC earns via Uniswap V4 LP positions, then an AI agent auto-bridges payouts through Circle Gateway to Arc Chain on payday.",
@@ -49,6 +53,7 @@ const HACKATHON_WINS: Win[] = [
     name: "Memed.Fun",
     placement: "1st Place",
     event: "Lens Spring",
+    date: "May 2025",
     prize: "$20K",
     description:
       "Creators mint their own meme tokens, battle for supremacy on Lens, and reward communities through a staking and engagement-rewards ecosystem.",
@@ -59,7 +64,8 @@ const HACKATHON_WINS: Win[] = [
   {
     name: "RepCheck",
     placement: "Winner",
-    event: "QuickNode",
+    event: "QuickNode Build On",
+    date: "Nov 2024",
     prize: "$7K",
     description:
       "On-chain DeFi reputation protocol on RepChain (an Avail rollup) — tracks Uniswap/Aave activity in real time via QuickNode Streams & Functions, with PYUSD staking multipliers.",
@@ -70,7 +76,8 @@ const HACKATHON_WINS: Win[] = [
   {
     name: "SAVR",
     placement: "Winner",
-    event: "Lens",
+    event: "Lens Holiday",
+    date: "Jan 2025",
     prize: "$2.5K",
     description:
       "Decentralized ROSCA for group savings — smart contracts pool contributions, earn yield via Aave, and coordinate disbursements cross-chain over Chainlink CCIP.",
@@ -422,8 +429,13 @@ export default function Home() {
                         {win.prize}
                       </span>
                     </div>
-                    <div className="font-label-caps text-label-caps text-on-surface-variant">
-                      {win.placement} // {win.event}
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="font-label-caps text-label-caps text-on-surface-variant">
+                        {win.placement} // {win.event}
+                      </span>
+                      <span className="font-label-caps text-label-caps text-outline whitespace-nowrap">
+                        {win.date}
+                      </span>
                     </div>
                     <p className="font-body-md text-body-md text-on-surface text-sm">
                       {win.description}
