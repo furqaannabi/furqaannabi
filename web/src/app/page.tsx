@@ -75,7 +75,7 @@ const HACKATHON_WINS: Win[] = [
   },
   {
     name: "SAVR",
-    placement: "Winner",
+    placement: "Honorable Mention",
     event: "Lens Holiday",
     date: "Jan 2025",
     prize: "$2.5K",
