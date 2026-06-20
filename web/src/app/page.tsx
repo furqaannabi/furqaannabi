@@ -63,7 +63,7 @@ const HACKATHON_WINS: Win[] = [
   },
   {
     name: "RepCheck",
-    placement: "Winner",
+    placement: "2nd Place",
     event: "QuickNode Build On",
     date: "Nov 2024",
     prize: "$7K",
