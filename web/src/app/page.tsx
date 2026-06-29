@@ -20,7 +20,7 @@ const HACKATHON_WINS: Win[] = [
     date: "Mar 2026",
     prize: "$10K",
     description:
-      "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private settlement.",
+      "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private [...]
     stack: ["SOLIDITY", "CHAINLINK_CRE", "WORLD_ID", "ACE", "TEE"],
     href: "https://github.com/furqaannabi/ssl",
     proof: "https://blog.chain.link/convergence-hackathon-winners/",
@@ -160,9 +160,6 @@ export default function Home() {
 
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
-                <div className="font-label-caps text-label-caps text-secondary mb-3 tracking-widest">
-                  &gt; OPERATOR // FURQAAN NABI
-                </div>
                 <h1 className="font-headline-lg text-headline-lg text-on-surface max-w-4xl mb-6 leading-tight">
                   Building seamless systems with purpose — high-impact
                   infrastructure across Web2 and Web3.
@@ -469,7 +466,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-surface-dim dark:bg-surface-dim flex flex-col md:flex-row justify-between items-center w-full px-margin py-4 gap-gutter docked full-width bottom-0 border-t border-outline-variant flat no shadows font-code-sm text-code-sm uppercase z-50 mt-auto">
+      <footer className="bg-surface-dim dark:bg-surface-dim flex flex-col md:flex-row justify-between items-center w-full px-margin py-4 gap-gutter docked full-width bottom-0 border-t border-outline-variant">
         <div className="font-label-caps text-label-caps text-outline">
           © {new Date().getFullYear()} FURQAAN_NABI
 
