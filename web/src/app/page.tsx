@@ -183,7 +183,7 @@ export default function Home() {
                     [ Contact ]
                   </a>
                   <a
-                    href="/furqaan-nabi-cv.pdf"
+                    href="/cv.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"

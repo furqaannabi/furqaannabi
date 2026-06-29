@@ -16,6 +16,10 @@ From private settlement layers to AI-driven protocols, I build systems designed 
    "Real power comes from building things that just work, again and again, under pressure and at scale."
 </h3>
 
+<p align="center">
+  <a href="https://furqaannabi.com/cv.pdf"><strong>📄 View CV</strong></a>
+</p>
+
 ---
 
 ## Core Competencies
