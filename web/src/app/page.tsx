@@ -20,7 +20,7 @@ const HACKATHON_WINS: Win[] = [
     date: "Mar 2026",
     prize: "$10K",
     description:
-      "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private [...]
+      "Privacy-preserving dark pool for tokenized RWAs — orders are matched confidentially inside a Chainlink CRE TEE, with World ID + ACE compliance and single-use shield addresses for private settlement.",
     stack: ["SOLIDITY", "CHAINLINK_CRE", "WORLD_ID", "ACE", "TEE"],
     href: "https://github.com/furqaannabi/ssl",
     proof: "https://blog.chain.link/convergence-hackathon-winners/",
@@ -412,7 +412,7 @@ export default function Home() {
                   TOTAL_PRIZE ~ {TOTAL_PRIZE_DISPLAY}
                 </span>
               </div>
-              <div className="p-module-padding grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+              <div className="p-module-padding hackathon-scroll">
                 {HACKATHON_WINS.map((win) => (
                   <div
                     key={win.name}

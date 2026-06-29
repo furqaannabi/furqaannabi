@@ -78,9 +78,9 @@
   --text-headline-md--letter-spacing: -0.02em;
   --text-headline-md--font-weight: 600;
 
-  --text-headline-lg: 48px;
-  --text-headline-lg--line-height: 1.1;
-  --text-headline-lg--letter-spacing: -0.04em;
+  --text-headline-lg: 28px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--letter-spacing: -0.02em;
   --text-headline-lg--font-weight: 700;
 
   --text-headline-sm: 20px;
@@ -149,6 +149,24 @@
     content: "_";
     animation: 1s step-end infinite blink;
   }
+  .hackathon-scroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .hackathon-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .hackathon-scroll > * {
+    scroll-snap-align: start;
+    min-width: 280px;
+    max-width: 320px;
+    flex-shrink: 0;
+  }
 }
 
 @keyframes blink {
@@ -169,4 +187,36 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-headline-lg: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-headline-lg: 48px;
+    --text-headline-lg--line-height: 1.1;
+    --text-headline-lg--letter-spacing: -0.04em;
+  }
+}
+
+@media (min-width: 768px) {
+  .hackathon-scroll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: visible;
+  }
+  .hackathon-scroll > * {
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hackathon-scroll {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
