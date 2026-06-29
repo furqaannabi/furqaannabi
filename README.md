@@ -54,14 +54,14 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 ## 🏆 Hackathon Wins
 
-| Project | Achievement | Date | Description | Proof |
-|--------|------------|------|-------------|-------|
-| [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Mar 2026 | Privacy-preserving dark pool for tokenized R[...]
-| [DealForge](https://github.com/furqaannabi/DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | Apr 2026 | Trustless protocol where AI agents negotiate, escrow, and settle deals [...]
-| [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Feb 2026 | Cross-chain payroll with yield — idle USDC earns via Uniswap V4 LPs, then an [...]
-| [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K) | May 2025 | Creators mint meme tokens, battle for supremacy on Lens, and reward communities through staking [...]
-| [SAVR](https://github.com/furqaannabi/savr) | 🎖️ Honorable Mention — Lens Holiday ($2.5K) | Jan 2025 | Decentralized ROSCA for group savings — pools contributions, earns yield via Aave,[...]
-| [RepCheck](https://github.com/furqaannabi/repcheck) | 🥈 2nd Place — QuickNode Build On ($7K) | Nov 2024 | On-chain DeFi reputation protocol on an Avail rollup — tracks Uniswap/Aave activi[...]
+| Project | Achievement | Description | Proof |
+|--------|------------|-------------|-------|
+| [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Privacy-preserving dark pool for tokenized R[...] | [Proof](https://blog.chain.link/convergence-hackathon-winners/) |
+| [DealForge](https://github.com/furqaannabi/DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | Trustless protocol where AI agents negotiate, escrow, and settle deals [...] | [Proof](https://synthesis.md/projects/#project/dealforge-9b3f) |
+| [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Cross-chain payroll with yield — idle USDC earns via Uniswap V4 LPs, then an [...] | [Proof](https://ethglobal.com/showcase/arcflow-rwysr) |
+| [Memed.Fun](https://github.com/furqaannabi/memed) | 🥇 1st Place — Lens Spring ($20K) | Creators mint meme tokens, battle for supremacy on Lens, and reward communities through staking [...] | [Proof](https://x.com/i/status/1929966819940676062) |
+| [SAVR](https://github.com/furqaannabi/savr) | 🎖️ Honorable Mention — Lens Holiday ($2.5K) | Decentralized ROSCA for group savings — pools contributions, earns yield via Aave,[...] | [Proof](https://x.com/i/status/1879908057700016179) |
+| [RepCheck](https://github.com/furqaannabi/repcheck) | 🥈 2nd Place — QuickNode Build On ($7K) | On-chain DeFi reputation protocol on an Avail rollup — tracks Uniswap/Aave activi[...] | [Proof](https://devfolio.co/projects/repcheck-0e48) |
 
 ---
 
