@@ -149,6 +149,9 @@
     content: "_";
     animation: 1s step-end infinite blink;
   }
+  .log-line {
+    animation: log-line-in 0.25s ease-out both;
+  }
   .hackathon-scroll {
     display: flex;
     gap: 16px;
@@ -176,6 +179,23 @@
   }
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes log-line-in {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .log-line {
+    animation: none;
   }
 }
 
