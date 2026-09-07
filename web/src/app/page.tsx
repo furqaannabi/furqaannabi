@@ -1,5 +1,6 @@
 import TelemetryCanvas from "./TelemetryCanvas";
 import LogFeed from "./LogFeed";
+import NavLinks from "./NavLinks";
 import { HACKATHON_WINS, TOTAL_PRIZE_DISPLAY } from "./data";
 
 type Social = {
@@ -49,26 +50,7 @@ export default function Home() {
         <div className="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed tracking-widest">
           FURQAAN_NABI
         </div>
-        <div className="hidden md:flex gap-gutter items-center font-body-md text-body-md md:font-label-caps md:text-label-caps">
-          <a
-            className="text-secondary border-b border-secondary font-bold hover:text-secondary transition-colors active:opacity-80 transition-all"
-            href="#dashboard"
-          >
-            DASHBOARD
-          </a>
-          <a
-            className="text-on-surface-variant hover:text-secondary transition-colors active:opacity-80 transition-all"
-            href="#competencies"
-          >
-            COMPETENCIES
-          </a>
-          <a
-            className="text-on-surface-variant hover:text-secondary transition-colors active:opacity-80 transition-all"
-            href="#hackathons"
-          >
-            HACKATHONS
-          </a>
-        </div>
+        <NavLinks />
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
           <span className="font-label-caps text-label-caps text-tertiary">
