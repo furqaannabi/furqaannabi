@@ -56,6 +56,7 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 | Project | Achievement | Description | Proof |
 |--------|------------|-------------|-------|
+| [ArcAsset](https://github.com/furqaannabi/arcasset) | 🏅 World Selfie Check Prize — ETHGlobal ETHOnline ($1.17K) | Autonomous agents servicing tokenized private credit on Arc — World ID-gated issuance, bounded-authority servicing agent, repayment data sold per query via x402 [...] | [Proof](https://ethglobal.com/showcase/arcasset-av1gr) |
 | [SSL — Stealth Settlement Layer](https://github.com/furqaannabi/ssl) | 🥇 1st Place (Privacy Track) — Chainlink Convergence ($10K) | Privacy-preserving dark pool for tokenized R[...] | [Proof](https://blog.chain.link/convergence-hackathon-winners/) |
 | [DealForge](https://github.com/furqaannabi/DealForge) | 🏆 2nd Place — Synthesis EigenCloud Track ($1000) | Trustless protocol where AI agents negotiate, escrow, and settle deals [...] | [Proof](https://synthesis.md/projects/#project/dealforge-9b3f) |
 | [ArcFlow](https://github.com/furqaannabi/arcflow) | 🎉 ETHGlobal HackMoney Arc Track Winner ($2500) | Cross-chain payroll with yield — idle USDC earns via Uniswap V4 LPs, then an [...] | [Proof](https://ethglobal.com/showcase/arcflow-rwysr) |

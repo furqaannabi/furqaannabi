@@ -12,6 +12,18 @@ export type Win = {
 
 export const HACKATHON_WINS: Win[] = [
   {
+    name: "ArcAsset",
+    placement: "Prize Winner",
+    event: "ETHGlobal ETHOnline — World Selfie Check",
+    date: "Sep 2026",
+    prize: "$1.17K",
+    description:
+      "Autonomous agents servicing tokenized private credit on Arc — World ID-gated originators and borrowers, a bounded-authority agent that advances periods, marks delinquency, and distributes coupons in native USDC, with the repayment record sold per query over HTTP 402.",
+    stack: ["SOLIDITY", "ARC", "WORLD_ID", "THE_GRAPH", "X402", "NEXT.JS"],
+    href: "https://github.com/furqaannabi/arcasset",
+    proof: "https://ethglobal.com/showcase/arcasset-av1gr",
+  },
+  {
     name: "SSL — Stealth Settlement Layer",
     placement: "1st Place (Privacy Track)",
     event: "Chainlink Convergence",
