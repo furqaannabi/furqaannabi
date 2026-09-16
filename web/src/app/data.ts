@@ -19,7 +19,7 @@ export const HACKATHON_WINS: Win[] = [
     prize: "$1.17K",
     description:
       "Autonomous agents servicing tokenized private credit on Arc — World ID-gated originators and borrowers, a bounded-authority agent that advances periods, marks delinquency, and distributes coupons in native USDC, with the repayment record sold per query over HTTP 402.",
-    stack: ["SOLIDITY", "ARC", "WORLD_ID", "THE_GRAPH", "X402", "NEXT.JS"],
+    stack: ["SOLIDITY", "ARC", "WORLD_ID", "THE_GRAPH", "X402"],
     href: "https://github.com/furqaannabi/arcasset",
     proof: "https://ethglobal.com/showcase/arcasset-av1gr",
   },
