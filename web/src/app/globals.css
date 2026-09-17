@@ -221,6 +221,29 @@
   }
 }
 
+/* Project details modal */
+html:has(dialog.project-dialog[open]) {
+  overflow: hidden;
+}
+.project-dialog[open] {
+  animation: dialog-in 0.18s ease-out;
+}
+.project-dialog[open]::backdrop {
+  animation: backdrop-in 0.18s ease-out;
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
 @keyframes blink {
   0%,
   to {
@@ -235,6 +258,10 @@
   .card-hover,
   .card-hover:hover {
     transform: none;
+  }
+  .project-dialog[open],
+  .project-dialog[open]::backdrop {
+    animation: none;
   }
 }
 

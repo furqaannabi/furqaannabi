@@ -3,6 +3,7 @@ import TelemetryCanvas from "./TelemetryCanvas";
 import NavLinks from "./NavLinks";
 import StatCounter from "./StatCounter";
 import Effects from "./Effects";
+import WinDetails from "./WinDetails";
 import {
   HACKATHON_WINS,
   TOTAL_PRIZE_K,
@@ -45,8 +46,9 @@ function WinCard({
 }) {
   return (
     <article
-      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group"
+      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group relative"
     >
+      <WinDetails win={win} rank={index + 1} total={HACKATHON_WINS.length} />
       <div className="flex items-start justify-between gap-2">
         <h3
           className={`${
@@ -95,7 +97,7 @@ function WinCard({
           </span>
         )}
       </div>
-      <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4">
+      <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4 relative z-10">
         <a
           href={win.href}
           target="_blank"
