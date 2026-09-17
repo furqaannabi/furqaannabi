@@ -141,9 +141,9 @@ export const TOTAL_PRIZE_K = HACKATHON_WINS.reduce(
 );
 
 
-const years = HACKATHON_WINS.map((w) => parseWinDate(w.date).getFullYear());
-export const FIRST_WIN_YEAR = Math.min(...years);
-export const LATEST_WIN_YEAR = Math.max(...years);
+/** Active range: building since 2022 → current year */
+export const ACTIVE_SINCE_YEAR = 2022;
+export const CURRENT_YEAR = new Date().getFullYear();
 
 export const LATEST_WIN: Win = [...HACKATHON_WINS].sort(
   (a, b) => parseWinDate(b.date).getTime() - parseWinDate(a.date).getTime(),

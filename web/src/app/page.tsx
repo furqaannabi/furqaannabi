@@ -1,4 +1,5 @@
 import { execSync } from "child_process";
+import Image from "next/image";
 import TelemetryCanvas from "./TelemetryCanvas";
 import NavLinks from "./NavLinks";
 import StatCounter from "./StatCounter";
@@ -7,8 +8,8 @@ import WinDetails from "./WinDetails";
 import {
   HACKATHON_WINS,
   TOTAL_PRIZE_K,
-  FIRST_WIN_YEAR,
-  LATEST_WIN_YEAR,
+  ACTIVE_SINCE_YEAR,
+  CURRENT_YEAR,
   LATEST_WIN,
   WINS_BY_PRIZE,
   type Win,
@@ -254,9 +255,13 @@ export default function Home() {
                 <span className="bracket top-[-1px] right-[-1px] border-t border-r" aria-hidden="true" />
                 <span className="bracket bottom-[-1px] left-[-1px] border-b border-l" aria-hidden="true" />
                 <span className="bracket bottom-[-1px] right-[-1px] border-b border-r" aria-hidden="true" />
-                <img
+                <Image
                   src="https://github.com/furqaannabi.png?size=512"
                   alt="Furqaan Nabi"
+                  width={512}
+                  height={512}
+                  sizes="(min-width: 768px) 240px, 144px"
+                  preload
                   className="w-full h-full object-cover grayscale opacity-80 transition-all duration-500 photo-frame-img"
                 />
               </div>
@@ -296,9 +301,9 @@ export default function Home() {
               </div>
               <div className="py-1 pl-4 md:pl-6 border-l border-surface-variant">
                 <div className="font-headline-md text-headline-sm md:text-headline-md text-on-surface tabular-nums leading-none whitespace-nowrap">
-                  <StatCounter value={FIRST_WIN_YEAR} delayMs={360} durationMs={900} />
+                  <StatCounter value={ACTIVE_SINCE_YEAR} delayMs={360} durationMs={900} />
                   <span className="text-secondary mx-1">→</span>
-                  <StatCounter value={LATEST_WIN_YEAR} delayMs={360} durationMs={900} />
+                  <StatCounter value={CURRENT_YEAR} delayMs={360} durationMs={900} />
                 </div>
                 <div className="font-label-caps text-label-caps text-outline mt-2">
                   ACTIVE_RANGE

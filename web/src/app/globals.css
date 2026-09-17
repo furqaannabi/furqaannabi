@@ -65,13 +65,13 @@
   --spacing-gutter: 16px;
   --spacing-breakpoint-lg: 1200px;
 
-  --font-headline-md: "Hanken Grotesk";
-  --font-headline-lg: "Hanken Grotesk";
-  --font-headline-sm: "Hanken Grotesk";
-  --font-label-caps: "JetBrains Mono";
-  --font-code-sm: "JetBrains Mono";
-  --font-body-lg: "JetBrains Mono";
-  --font-body-md: "JetBrains Mono";
+  --font-headline-md: var(--font-hanken-grotesk);
+  --font-headline-lg: var(--font-hanken-grotesk);
+  --font-headline-sm: var(--font-hanken-grotesk);
+  --font-label-caps: var(--font-jetbrains-mono);
+  --font-code-sm: var(--font-jetbrains-mono);
+  --font-body-lg: var(--font-jetbrains-mono);
+  --font-body-md: var(--font-jetbrains-mono);
 
   --text-headline-md: 32px;
   --text-headline-md--line-height: 1.2;
