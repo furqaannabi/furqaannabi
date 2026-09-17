@@ -178,13 +178,14 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="flex-grow flex flex-col md:flex-row relative z-10 w-full max-w-[1440px] mx-auto">
-        {/* Background Grid */}
-        <div className="absolute inset-0 bg-grid pointer-events-none -z-20"></div>
-
-        {/* Active Telemetry Canvas */}
+      <div className="page-bg" aria-hidden="true">
+        <div className="bg-grid" />
+        <div className="bg-glow" />
         <TelemetryCanvas />
-        <Effects />
+      </div>
+      <Effects />
+
+      <main className="flex-grow flex flex-col md:flex-row relative z-10 w-full max-w-[1440px] mx-auto">
 
         {/* Main Content Area */}
         <div className="flex-grow p-gutter md:p-margin flex flex-col gap-gutter">
