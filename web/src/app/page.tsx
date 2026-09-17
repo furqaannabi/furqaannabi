@@ -325,9 +325,6 @@ export default function Home() {
               <span className="font-label-caps text-label-caps text-outline hidden md:inline">
                 SORTED_BY_PRIZE
               </span>
-              <span className="font-label-caps text-label-caps text-outline md:hidden">
-                AUTO_SCROLL
-              </span>
             </div>
             <div className="hidden md:flex md:flex-col gap-gutter p-module-padding">
               {/* Featured wins */}
