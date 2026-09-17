@@ -278,8 +278,14 @@ html:has(dialog.project-dialog[open]) {
   }
   .project-dialog[open],
   .project-dialog[open]::backdrop,
-  .bg-glow {
+  .bg-glow,
+  .win-marquee-track {
     animation: none;
+  }
+  .win-marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -297,6 +303,44 @@ html:has(dialog.project-dialog[open]) {
   }
   to {
     transform: translate3d(5%, 4%, 0) scale(1.08);
+  }
+}
+
+.win-marquee {
+  overflow: hidden;
+  padding: 16px 0 20px;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 16px,
+    #000 calc(100% - 16px),
+    transparent
+  );
+}
+.win-marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  padding-inline: 16px;
+  animation: win-marquee 36s linear infinite;
+}
+.win-marquee-track > * {
+  width: min(78vw, 300px);
+  flex-shrink: 0;
+}
+.win-marquee:active .win-marquee-track {
+  animation-play-state: paused;
+}
+html:has(dialog.project-dialog[open]) .win-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes win-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 

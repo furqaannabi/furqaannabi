@@ -47,7 +47,7 @@ function WinCard({
 }) {
   return (
     <article
-      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group relative"
+      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group relative h-full"
     >
       <WinDetails win={win} rank={index + 1} total={HACKATHON_WINS.length} />
       <div className="flex items-start justify-between gap-2">
@@ -322,11 +322,14 @@ export default function Home() {
               <span className="font-label-caps text-label-caps text-on-surface-variant">
                 SYS_01 // HACKATHON_WINS
               </span>
-              <span className="font-label-caps text-label-caps text-outline">
+              <span className="font-label-caps text-label-caps text-outline hidden md:inline">
                 SORTED_BY_PRIZE
               </span>
+              <span className="font-label-caps text-label-caps text-outline md:hidden">
+                AUTO_SCROLL
+              </span>
             </div>
-            <div className="p-module-padding flex flex-col gap-gutter">
+            <div className="hidden md:flex md:flex-col gap-gutter p-module-padding">
               {/* Featured wins */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 {FEATURED_WINS.map((win, i) => (
@@ -338,6 +341,18 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
                 {COMPACT_WINS.map((win, i) => (
                   <WinCard key={win.name} win={win} index={i + FEATURED_COUNT} />
+                ))}
+              </div>
+            </div>
+
+            <div className="win-marquee md:hidden" aria-label="Hackathon wins">
+              <div className="win-marquee-track">
+                {[...WINS_BY_PRIZE, ...WINS_BY_PRIZE].map((win, i) => (
+                  <WinCard
+                    key={`${win.name}-${i}`}
+                    win={win}
+                    index={i % WINS_BY_PRIZE.length}
+                  />
                 ))}
               </div>
             </div>
