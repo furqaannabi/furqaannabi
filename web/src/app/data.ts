@@ -2,6 +2,7 @@ export type Win = {
   name: string;
   placement: string;
   event: string;
+  org: string;
   date: string;
   prize: string;
   description: string;
@@ -15,6 +16,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "ArcAsset",
     placement: "Prize Winner",
     event: "ETHGlobal ETHOnline — World Selfie Check",
+    org: "ETHGLOBAL",
     date: "Sep 2026",
     prize: "$1.17K",
     description:
@@ -27,6 +29,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "SSL — Stealth Settlement Layer",
     placement: "1st Place (Privacy Track)",
     event: "Chainlink Convergence",
+    org: "CHAINLINK",
     date: "Mar 2026",
     prize: "$10K",
     description:
@@ -39,6 +42,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "DealForge",
     placement: "2nd Place",
     event: "Synthesis — EigenCloud Track",
+    org: "SYNTHESIS",
     date: "Apr 2026",
     prize: "$1K",
     description:
@@ -51,6 +55,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "ArcFlow",
     placement: "Track Winner",
     event: "ETHGlobal HackMoney — Arc Track",
+    org: "ETHGLOBAL",
     date: "Feb 2026",
     prize: "$2.5K",
     description:
@@ -63,6 +68,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "Memed.Fun",
     placement: "1st Place",
     event: "Lens Spring",
+    org: "LENS",
     date: "May 2025",
     prize: "$20K",
     description:
@@ -75,6 +81,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "SAVR",
     placement: "Honorable Mention",
     event: "Lens Holiday",
+    org: "LENS",
     date: "Jan 2025",
     prize: "$2.5K",
     description:
@@ -87,6 +94,7 @@ export const HACKATHON_WINS: Win[] = [
     name: "RepCheck",
     placement: "2nd Place",
     event: "QuickNode Build On",
+    org: "QUICKNODE",
     date: "Nov 2024",
     prize: "$7K",
     description:
@@ -109,3 +117,34 @@ export function formatTotalPrize(wins: Win[]): string {
 }
 
 export const TOTAL_PRIZE_DISPLAY = formatTotalPrize(HACKATHON_WINS);
+
+const MONTHS: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+};
+
+/** Parses "Sep 2026" → Date */
+export function parseWinDate(date: string): Date {
+  const [mon, year] = date.split(" ");
+  return new Date(Number(year), MONTHS[mon] ?? 0, 1);
+}
+
+
+/** Wins largest prize → smallest */
+export const WINS_BY_PRIZE: Win[] = [...HACKATHON_WINS].sort(
+  (a, b) => parsePrizeK(b.prize) - parsePrizeK(a.prize),
+);
+
+export const TOTAL_PRIZE_K = HACKATHON_WINS.reduce(
+  (sum, w) => sum + parsePrizeK(w.prize),
+  0,
+);
+
+
+const years = HACKATHON_WINS.map((w) => parseWinDate(w.date).getFullYear());
+export const FIRST_WIN_YEAR = Math.min(...years);
+export const LATEST_WIN_YEAR = Math.max(...years);
+
+export const LATEST_WIN: Win = [...HACKATHON_WINS].sort(
+  (a, b) => parseWinDate(b.date).getTime() - parseWinDate(a.date).getTime(),
+)[0];

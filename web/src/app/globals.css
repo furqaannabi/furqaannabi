@@ -149,26 +149,75 @@
     content: "_";
     animation: 1s step-end infinite blink;
   }
-  .log-line {
-    animation: log-line-in 0.25s ease-out both;
+  /* Interactive card: lift + accent glow */
+  .card-hover {
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
   }
-  .hackathon-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 4px;
+  .card-hover:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 182, 147, 0.45);
+    box-shadow:
+      0 0 0 1px rgba(255, 182, 147, 0.12),
+      0 16px 40px -18px rgba(255, 182, 147, 0.35);
   }
-  .hackathon-scroll::-webkit-scrollbar {
-    display: none;
+
+
+  /* Cursor spotlight */
+  #spotlight {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+      560px circle at var(--mx, -1000px) var(--my, -1000px),
+      rgba(255, 182, 147, 0.07),
+      rgba(255, 182, 147, 0.025) 35%,
+      transparent 65%
+    );
   }
-  .hackathon-scroll > * {
-    scroll-snap-align: start;
-    min-width: 280px;
-    max-width: 320px;
-    flex-shrink: 0;
+  .has-spotlight #spotlight {
+    opacity: 1;
+  }
+
+  /* Portrait frame: scanlines + corner brackets */
+  .photo-frame {
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    pointer-events: none;
+    z-index: 2;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0 2px,
+      rgba(0, 0, 0, 0.18) 2px 3px
+    );
+    mix-blend-mode: multiply;
+    opacity: 0.9;
+    transition: opacity 0.4s ease;
+  }
+  .photo-frame:hover {
+    border-color: rgba(255, 182, 147, 0.6);
+    box-shadow: 0 0 24px -6px rgba(255, 182, 147, 0.35);
+  }
+  .photo-frame:hover::before {
+    opacity: 0.25;
+  }
+  .photo-frame .bracket {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: #ffb693;
+    border-style: solid;
+    z-index: 3;
   }
 }
 
@@ -182,20 +231,10 @@
   }
 }
 
-@keyframes log-line-in {
-  from {
-    opacity: 0;
-    transform: translateX(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .log-line {
-    animation: none;
+  .card-hover,
+  .card-hover:hover {
+    transform: none;
   }
 }
 
@@ -220,23 +259,5 @@
     --text-headline-lg: 48px;
     --text-headline-lg--line-height: 1.1;
     --text-headline-lg--letter-spacing: -0.04em;
-  }
-}
-
-@media (min-width: 768px) {
-  .hackathon-scroll {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    overflow-x: visible;
-  }
-  .hackathon-scroll > * {
-    min-width: unset;
-    max-width: unset;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hackathon-scroll {
-    grid-template-columns: repeat(3, 1fr);
   }
 }

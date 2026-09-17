@@ -1,7 +1,123 @@
+import { execSync } from "child_process";
 import TelemetryCanvas from "./TelemetryCanvas";
-import LogFeed from "./LogFeed";
 import NavLinks from "./NavLinks";
-import { HACKATHON_WINS, TOTAL_PRIZE_DISPLAY } from "./data";
+import StatCounter from "./StatCounter";
+import Effects from "./Effects";
+import {
+  HACKATHON_WINS,
+  TOTAL_PRIZE_K,
+  FIRST_WIN_YEAR,
+  LATEST_WIN_YEAR,
+  LATEST_WIN,
+  WINS_BY_PRIZE,
+  type Win,
+} from "./data";
+
+const FEATURED_COUNT = 3;
+const FEATURED_WINS = WINS_BY_PRIZE.slice(0, FEATURED_COUNT);
+const COMPACT_WINS = WINS_BY_PRIZE.slice(FEATURED_COUNT);
+
+function resolveBuildHash(): string {
+  const fromEnv =
+    process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.GIT_COMMIT_SHA;
+  if (fromEnv) return fromEnv.slice(0, 7);
+  try {
+    return execSync("git rev-parse --short=7 HEAD", {
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+  } catch {
+    return "dev";
+  }
+}
+
+const BUILD_HASH = resolveBuildHash();
+
+function WinCard({
+  win,
+  index,
+  featured = false,
+}: {
+  win: Win;
+  index: number;
+  featured?: boolean;
+}) {
+  return (
+    <article
+      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group"
+    >
+      <div className="flex items-start justify-between gap-2">
+        <h3
+          className={`${
+            featured ? "font-headline-sm text-headline-sm" : "font-body-md text-body-md font-semibold"
+          } text-secondary group-hover:text-white transition-colors`}
+        >
+          {win.name}
+        </h3>
+        <span
+          className={`font-label-caps text-label-caps border px-2 py-1 whitespace-nowrap ${
+            featured
+              ? "text-tertiary border-tertiary bg-tertiary-fixed-dim/10"
+              : "text-tertiary/80 border-tertiary/50"
+          }`}
+        >
+          {win.prize}
+        </span>
+      </div>
+      <div className="flex items-start justify-between gap-2">
+        <span className="font-label-caps text-label-caps text-on-surface-variant">
+          {`${win.placement} // ${win.event}`}
+        </span>
+        <span className="font-label-caps text-label-caps text-outline whitespace-nowrap">
+          {win.date}
+        </span>
+      </div>
+      <p
+        className={`font-body-md text-body-md text-on-surface text-sm ${
+          featured ? "" : "line-clamp-2 text-on-surface-variant"
+        }`}
+      >
+        {win.description}
+      </p>
+      <div className="flex flex-wrap gap-1.5">
+        {(featured ? win.stack : win.stack.slice(0, 3)).map((tech) => (
+          <span
+            key={tech}
+            className="bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px]"
+          >
+            {tech}
+          </span>
+        ))}
+        {!featured && win.stack.length > 3 && (
+          <span className="text-outline px-1 py-0.5 font-label-caps text-label-caps text-[10px]">
+            +{win.stack.length - 3}
+          </span>
+        )}
+      </div>
+      <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4">
+        <a
+          href={win.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-secondary transition-colors"
+        >
+          [ VIEW_SOURCE ]
+        </a>
+        {win.proof && (
+          <a
+            href={win.proof}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-secondary transition-colors"
+          >
+            [ PROOF ]
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
 
 type Social = {
   label: string;
@@ -65,15 +181,14 @@ export default function Home() {
 
         {/* Active Telemetry Canvas */}
         <TelemetryCanvas />
-
-
+        <Effects />
 
         {/* Main Content Area */}
         <div className="flex-grow p-gutter md:p-margin flex flex-col gap-gutter">
           {/* Hero Dashboard Top Area */}
           <section
             id="dashboard"
-            className="module-border bg-surface-container-lowest/80 backdrop-blur-sm p-module-padding flex flex-col justify-center min-h-[409px] relative overflow-hidden group scroll-mt-16"
+            className="module-border bg-surface-container-lowest/80 backdrop-blur-sm p-module-padding flex flex-col justify-center relative overflow-hidden group scroll-mt-16"
           >
             {/* Decorative Corner Accents */}
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-surface-variant"></div>
@@ -81,13 +196,29 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-surface-variant"></div>
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-surface-variant"></div>
 
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="flex-1">
-                <h1 className="font-headline-lg text-headline-lg text-on-surface max-w-4xl mb-6 leading-tight">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+              <div className="flex-1 min-w-0">
+                <div className="font-label-caps text-label-caps text-secondary mb-5 flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="opacity-60">&gt;</span>
+                  <span className="text-outline">LATEST_DEPLOYMENT:</span>
+                  <a
+                    href={LATEST_WIN.proof ?? LATEST_WIN.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline underline-offset-4"
+                  >
+                    {LATEST_WIN.name}
+                  </a>
+                  <span className="text-outline">
+                    {`// ${LATEST_WIN.org} · ${LATEST_WIN.date.toUpperCase()}`}
+                  </span>
+                  <span className="text-secondary blinking-cursor" aria-hidden="true"></span>
+                </div>
+                <h1 className="font-headline-lg text-headline-lg text-on-surface max-w-4xl mb-5 leading-tight">
                   Building seamless systems with purpose — high-impact
                   infrastructure across Web2 and Web3.
                 </h1>
-                <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mb-6">
+                <p className="font-body-md text-body-md text-on-surface-variant max-w-3xl mb-5">
                   Full-stack engineer focused on infrastructure, privacy, and
                   autonomous systems. From private settlement layers to
                   AI-driven protocols, building systems designed to operate at
@@ -98,7 +229,7 @@ export default function Home() {
                   &ldquo;Real power comes from building things that just work,
                   again and again, under pressure and at scale.&rdquo;
                 </blockquote>
-                <div className="flex flex-wrap gap-4 mt-2">
+                <div className="flex flex-wrap gap-4">
                   <a
                     href="mailto:hi@furqaannabi.com"
                     className="terminal-button font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest text-primary"
@@ -115,213 +246,107 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="w-40 h-40 md:w-64 md:h-64 mx-auto md:mx-0 order-first md:order-none border border-surface-variant p-2 bg-[#0A0A0A] shrink-0">
+
+              <div className="w-36 h-36 md:w-60 md:h-60 mx-auto md:mx-0 order-first md:order-none photo-frame border border-surface-variant p-2 bg-[#0A0A0A] shrink-0">
+                <span className="bracket top-[-1px] left-[-1px] border-t border-l" aria-hidden="true" />
+                <span className="bracket top-[-1px] right-[-1px] border-t border-r" aria-hidden="true" />
+                <span className="bracket bottom-[-1px] left-[-1px] border-b border-l" aria-hidden="true" />
+                <span className="bracket bottom-[-1px] right-[-1px] border-b border-r" aria-hidden="true" />
                 <img
                   src="https://github.com/furqaannabi.png?size=512"
                   alt="Furqaan Nabi"
-                  className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-full object-cover grayscale opacity-80 transition-all duration-500 photo-frame-img"
                 />
+              </div>
+            </div>
+
+            {/* Stats strip */}
+            <div className="mt-8 pt-6 border-t border-surface-variant grid grid-cols-2 md:grid-cols-4 gap-y-6">
+              <div className="py-1 md:pr-6">
+                <div className="font-headline-md text-headline-md text-on-surface leading-none">
+                  BCA
+                </div>
+                <div className="font-label-caps text-label-caps text-outline mt-2">
+                  FINTECH_&amp;_AI // AMITY · 2028
+                </div>
+              </div>
+              <div className="py-1 pl-4 md:px-6 border-l border-surface-variant">
+                <div className="font-headline-md text-headline-md text-on-surface tabular-nums leading-none">
+                  <StatCounter value={HACKATHON_WINS.length} pad={2} />
+                </div>
+                <div className="font-label-caps text-label-caps text-outline mt-2">
+                  HACKATHON_WINS
+                </div>
+              </div>
+              <div className="py-1 md:px-6 md:border-l border-surface-variant">
+                <div className="font-headline-md text-headline-md text-tertiary tabular-nums leading-none">
+                  <StatCounter
+                    value={TOTAL_PRIZE_K}
+                    prefix="$"
+                    suffix="K"
+                    decimals={1}
+                    delayMs={120}
+                  />
+                </div>
+                <div className="font-label-caps text-label-caps text-outline mt-2">
+                  TOTAL_PRIZES
+                </div>
+              </div>
+              <div className="py-1 pl-4 md:pl-6 border-l border-surface-variant">
+                <div className="font-headline-md text-headline-sm md:text-headline-md text-on-surface tabular-nums leading-none whitespace-nowrap">
+                  <StatCounter value={FIRST_WIN_YEAR} delayMs={360} durationMs={900} />
+                  <span className="text-secondary mx-1">→</span>
+                  <StatCounter value={LATEST_WIN_YEAR} delayMs={360} durationMs={900} />
+                </div>
+                <div className="font-label-caps text-label-caps text-outline mt-2">
+                  ACTIVE_RANGE
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Bento Grid Layout for Systems & Now Building */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            {/* Systems Section (Featured Project) */}
-            <section
-              id="systems"
-              className="md:col-span-8 module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col scroll-mt-16"
-            >
-              <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low">
-                <span className="font-label-caps text-label-caps text-on-surface-variant">
-                  SYS_01 // FEATURED_DEPLOYMENT
-                </span>
-              </div>
-              <div className="p-module-padding flex-grow flex flex-col gap-6">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start items-start gap-3 md:gap-4">
-                  <div className="min-w-0">
-                    <h2 className="font-headline-md text-headline-md text-secondary mb-1">
-                      SSL — STEALTH SETTLEMENT LAYER
-                    </h2>
-                    <p className="font-body-md text-body-md text-on-surface-variant">
-                      Privacy-preserving dark pool for tokenized RWAs — 1st Place
-                      (Privacy Track), Chainlink Convergence ($10K)
-                    </p>
-                  </div>
-                  <div className="bg-tertiary-fixed-dim/20 text-tertiary border border-tertiary font-label-caps text-label-caps px-2 py-1 uppercase whitespace-nowrap self-start shrink-0">
-                    [ STATUS : DEPLOYED ]
-                  </div>
-                </div>
-
-                {/* Mini Architecture Diagram Mockup */}
-                <div className="bg-[#0A0A0A] border border-surface-variant p-4 pt-6 font-code-sm text-code-sm text-on-surface-variant relative overflow-x-auto">
-                  <div className="absolute top-2 right-2 text-surface-variant text-xs">
-                    ARCH_V1.2
-                  </div>
-                  <div className="flex justify-between items-center gap-2 max-w-md mx-auto my-4 min-w-[420px]">
-                    <div className="border border-outline-variant p-2 text-center w-24 shrink-0">
-                      SENDER
-                    </div>
-                    <div className="h-px bg-outline-variant w-12 relative shrink-0">
-                      <span className="absolute right-0 -top-1">►</span>
-                    </div>
-                    <div className="border border-secondary text-secondary p-2 text-center w-32 shadow-[0_0_10px_rgba(255,182,147,0.1)] shrink-0">
-                      STEALTH_CRE
-                    </div>
-                    <div className="h-px bg-outline-variant w-12 relative shrink-0">
-                      <span className="absolute right-0 -top-1">►</span>
-                    </div>
-                    <div className="border border-outline-variant p-2 text-center w-24 shrink-0">
-                      RECEIVER
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <div className="font-label-caps text-label-caps text-outline mb-2">
-                      INFRA_STACK
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        SOLIDITY
-                      </span>
-                      <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        CHAINLINK_CRE
-                      </span>
-                      <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        WORLD_ID
-                      </span>
-                      <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        ACE
-                      </span>
-                      <span className="bg-surface-variant text-on-surface px-2 py-1 font-label-caps text-label-caps">
-                        TEE
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-label-caps text-label-caps text-outline mb-2">
-                      SYS_OBJECTIVE
-                    </div>
-                    <p className="font-body-md text-body-md text-on-surface text-sm">
-                      Give institutional traders a sybil-resistant dark pool:
-                      orders are matched confidentially inside a Chainlink CRE
-                      TEE while compliance stays enforced on-chain via World ID
-                      and ACE.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-3 pt-2 border-t border-surface-variant">
-                  <a
-                    href="https://github.com/furqaannabi/ssl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="terminal-button font-label-caps text-label-caps px-4 py-2 uppercase tracking-widest text-primary"
-                  >
-                    [ SOURCE ]
-                  </a>
-                  <span className="font-label-caps text-label-caps text-outline self-center">
-                    AWARD // CHAINLINK_CONVERGENCE_2026
-                  </span>
-                </div>
-              </div>
-            </section>
-
-            {/* Core Competencies Section */}
-            <section
-              id="competencies"
-              className="md:col-span-4 module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col scroll-mt-16"
-            >
-              <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low justify-between">
-                <span className="font-label-caps text-label-caps text-on-surface-variant">
-                  LOG // CORE_COMPETENCIES
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="font-label-caps text-label-caps text-secondary">
-                    LIVE
-                  </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
-                </span>
-              </div>
-              <div className="p-module-padding flex-grow bg-[#0A0A0A] font-code-sm text-code-sm overflow-hidden relative">
-                <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
-                <LogFeed />
-              </div>
-            </section>
-
-            {/* Hackathon Wins Section */}
-            <section
-              id="hackathons"
-              className="md:col-span-12 module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col mt-4 scroll-mt-16"
-            >
-              <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low justify-between">
-                <span className="font-label-caps text-label-caps text-on-surface-variant">
-                  SYS_02 // HACKATHON_WINS
-                </span>
-                <span className="font-label-caps text-label-caps text-tertiary">
-                  TOTAL_PRIZE ~ {TOTAL_PRIZE_DISPLAY}
-                </span>
-              </div>
-              <div className="p-module-padding hackathon-scroll">
-                {HACKATHON_WINS.map((win) => (
-                  <div
-                    key={win.name}
-                    className="module-border bg-[#0A0A0A] p-4 flex flex-col gap-3 group"
-                  >
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-headline-sm text-headline-sm text-secondary group-hover:text-white transition-colors">
-                        {win.name}
-                      </h3>
-                      <span className="font-label-caps text-label-caps text-tertiary border border-tertiary px-2 py-1 whitespace-nowrap">
-                        {win.prize}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-label-caps text-label-caps text-on-surface-variant">
-                        {win.placement} // {win.event}
-                      </span>
-                      <span className="font-label-caps text-label-caps text-outline whitespace-nowrap">
-                        {win.date}
-                      </span>
-                    </div>
-                    <p className="font-body-md text-body-md text-on-surface text-sm">
-                      {win.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {win.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4">
-                      <a href={win.href} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                        [ VIEW_SOURCE ]
-                      </a>
-                      {win.proof && (
-                        <a href={win.proof} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                          [ PROOF ]
-                        </a>
-                      )}
-                    </div>
-                  </div>
+          {/* Hackathon Wins Section */}
+          <section
+            id="hackathons"
+            className="module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col scroll-mt-16"
+          >
+            <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low justify-between">
+              <span className="font-label-caps text-label-caps text-on-surface-variant">
+                SYS_01 // HACKATHON_WINS
+              </span>
+              <span className="font-label-caps text-label-caps text-outline">
+                SORTED_BY_PRIZE
+              </span>
+            </div>
+            <div className="p-module-padding flex flex-col gap-gutter">
+              {/* Featured wins */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                {FEATURED_WINS.map((win, i) => (
+                  <WinCard key={win.name} win={win} index={i} featured />
                 ))}
               </div>
-            </section>
-          </div>
+
+              {/* Remaining wins */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                {COMPACT_WINS.map((win, i) => (
+                  <WinCard key={win.name} win={win} index={i + FEATURED_COUNT} />
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
       </main>
 
       {/* Footer */}
       <footer className="bg-surface-dim dark:bg-surface-dim flex flex-col md:flex-row justify-between items-center w-full px-margin py-4 gap-gutter docked full-width bottom-0 border-t border-outline-variant">
-        <div className="font-label-caps text-label-caps text-outline">
-          © {new Date().getFullYear()} FURQAAN_NABI
-
+        <div className="font-label-caps text-label-caps text-outline flex items-center gap-3">
+          <span>© {new Date().getFullYear()} FURQAAN_NABI</span>
+          <span className="text-surface-variant" aria-hidden="true">
+            |
+          </span>
+          <span className="text-outline/70" title="Deployed commit">
+            BUILD // <span className="text-secondary/80">{BUILD_HASH}</span>
+          </span>
         </div>
         <div className="flex gap-5 flex-wrap justify-center items-center">
           {SOCIALS.map((social) => (
