@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
@@ -92,6 +93,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden relative">
         {children}
+        <Analytics />
       </body>
     </html>
   );
