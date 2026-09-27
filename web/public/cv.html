@@ -142,6 +142,21 @@
   .award-more .award-name { color: var(--muted); }
   .award-more a { color: var(--accent); text-decoration: none; }
 
+  /* Experience */
+  .exp { margin-bottom: 10px; }
+  .exp:last-child { margin-bottom: 0; }
+  .exp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .exp-name { font-weight: 700; color: var(--ink); font-size: 11.5px; }
+  .exp-role { font-style: italic; color: var(--accent); font-weight: 400; }
+  .exp-date {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 9px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .exp-desc { font-size: 10px; color: var(--body); margin-top: 2px; }
+  .exp-desc a { color: var(--accent); text-decoration: none; }
+
   .awards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
 
   footer {
@@ -191,8 +206,27 @@
       Full-stack engineer focused on infrastructure, privacy, and autonomous systems. Experienced in building
       everything from private settlement layers to AI-driven protocols, with an emphasis on systems designed to
       operate at scale, under pressure, and without reliance on centralized control. Multiple-time hackathon
-      winner across leading Web3 ecosystems.
+      winner across leading Web3 ecosystems. Two-time startup founder, currently open to starting something new or
+      joining a team.
     </p>
+  </section>
+
+  <section>
+    <div class="sec-title">Experience</div>
+    <div class="exp">
+      <div class="exp-head">
+        <span class="exp-name">Memed.Fun <span class="exp-role">— Founder</span></span>
+        <span class="exp-date">Jun 2025 – Jul 2026 · Sunset</span>
+      </div>
+      <div class="exp-desc">Took the Lens Spring 1st-place project ($20K) full-time — creators mint their own meme tokens, battle for supremacy on Lens, and reward their communities through a staking and engagement-rewards ecosystem. Solidity, Lens, Node.js, The Graph, IPFS.</div>
+    </div>
+    <div class="exp">
+      <div class="exp-head">
+        <span class="exp-name">WeRepl <span class="exp-role">— Founder</span></span>
+        <span class="exp-date">Oct 2022 – May 2024 · Sunset</span>
+      </div>
+      <div class="exp-desc">First startup, and where I started coding. A crowdsourced blacklist for a safer web, launched on BNB Chain — users reported harmful sites, validators verified them, and the blacklist was served to browsers and wallets via APIs and forwarded to registrars and hosting providers for takedown. Soulbound Passes recorded each validated report, with daily token rewards for reporters and validators. <a href="https://furqaannabi.com/werepl-litepaper.pdf">Litepaper</a>.</div>
+    </div>
   </section>
 
   <div class="grid-2">

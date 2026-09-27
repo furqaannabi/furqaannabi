@@ -12,6 +12,7 @@ import {
   CURRENT_YEAR,
   LATEST_WIN,
   WINS_BY_PRIZE,
+  VENTURES,
   type Win,
 } from "./data";
 
@@ -321,6 +322,103 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Experience Section */}
+          <section
+            id="experience"
+            className="module-border bg-surface-container-lowest/90 backdrop-blur-sm flex flex-col scroll-mt-16"
+          >
+            <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low justify-between">
+              <span className="font-label-caps text-label-caps text-on-surface-variant">
+                SYS_01 // EXPERIENCE
+              </span>
+              <span className="font-label-caps text-label-caps text-outline">
+                NEWEST_FIRST
+              </span>
+            </div>
+            <ol className="p-module-padding flex flex-col">
+              {/* Now */}
+              <li className="relative pl-6 pb-8 border-l border-surface-variant ml-1">
+                <span
+                  className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"
+                  aria-hidden="true"
+                />
+                <div className="font-label-caps text-label-caps text-tertiary mb-2">
+                  NOW // AVAILABLE
+                </div>
+                <p className="font-body-md text-body-md text-on-surface max-w-2xl">
+                  Two startups in, looking for what&rsquo;s next — starting
+                  something new or joining a team as a full-stack engineer.
+                </p>
+                <a
+                  href="mailto:hi@furqaannabi.com"
+                  className="inline-block mt-3 font-label-caps text-label-caps text-secondary hover:underline underline-offset-4"
+                >
+                  [ GET_IN_TOUCH ]
+                </a>
+              </li>
+
+              {VENTURES.map((v, i) => (
+                <li
+                  key={v.name}
+                  className={`relative pl-6 border-l border-surface-variant ml-1 ${
+                    i === VENTURES.length - 1 ? "pb-1" : "pb-8"
+                  }`}
+                >
+                  <span
+                    className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full border border-outline bg-surface-container-lowest"
+                    aria-hidden="true"
+                  />
+                  <div className="font-label-caps text-label-caps text-outline mb-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span>{`${v.start.toUpperCase()} — ${v.end.toUpperCase()}`}</span>
+                    <span className="border border-outline-variant px-1.5 py-0.5 text-on-surface-variant">
+                      {v.status}
+                    </span>
+                  </div>
+                  <h3 className="font-headline-sm text-headline-sm text-secondary">
+                    {v.name}
+                    <span className="font-body-md text-body-md text-on-surface-variant font-normal">
+                      {` // ${v.role}`}
+                    </span>
+                  </h3>
+                  <p className="font-body-md text-body-md text-on-surface mt-2 max-w-3xl">
+                    {v.summary}
+                  </p>
+                  <ul className="mt-3 flex flex-col gap-1 font-body-md text-body-md text-on-surface-variant text-sm max-w-3xl">
+                    {v.points.map((point) => (
+                      <li key={point} className="flex gap-2">
+                        <span className="text-secondary" aria-hidden="true">
+                          &gt;
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                    {v.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {v.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 font-label-caps text-label-caps text-outline hover:text-secondary transition-colors"
+                      >
+                        {`[ ${link.label} ]`}
+                      </a>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
           {/* Hackathon Wins Section */}
           <section
             id="hackathons"
@@ -328,7 +426,7 @@ export default function Home() {
           >
             <div className="border-b border-surface-variant p-2 px-4 flex items-center bg-surface-container-low justify-between">
               <span className="font-label-caps text-label-caps text-on-surface-variant">
-                SYS_01 // HACKATHON_WINS
+                SYS_02 // HACKATHON_WINS
               </span>
               <span className="font-label-caps text-label-caps text-outline">
                 SORTED_BY_PRIZE

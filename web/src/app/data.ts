@@ -148,3 +148,50 @@ export const CURRENT_YEAR = new Date().getFullYear();
 export const LATEST_WIN: Win = [...HACKATHON_WINS].sort(
   (a, b) => parseWinDate(b.date).getTime() - parseWinDate(a.date).getTime(),
 )[0];
+
+export type Venture = {
+  name: string;
+  role: string;
+  start: string;
+  end: string;
+  status: string;
+  summary: string;
+  points: string[];
+  stack: string[];
+  links: { label: string; href: string }[];
+};
+
+/** Startups, newest first */
+export const VENTURES: Venture[] = [
+  {
+    name: "Memed.Fun",
+    role: "Founder",
+    start: "Jun 2025",
+    end: "Jul 2026",
+    status: "SUNSET",
+    summary:
+      "Took the Lens Spring 1st-place project full-time — a platform where creators mint their own meme tokens, battle for supremacy on Lens, and reward their communities.",
+    points: [
+      "Grew out of a $20K hackathon win into a year-long startup",
+      "Staking and engagement-rewards ecosystem for creator communities",
+    ],
+    stack: ["SOLIDITY", "LENS", "NODE.JS", "THE_GRAPH", "IPFS"],
+    links: [{ label: "SOURCE", href: "https://github.com/furqaannabi/memed" }],
+  },
+  {
+    name: "WeRepl",
+    role: "Founder",
+    start: "Oct 2022",
+    end: "May 2024",
+    status: "SUNSET",
+    summary:
+      "My first startup, and where I started coding. A crowdsourced blacklist for a safer web — users report harmful sites, validators verify them, and the blacklist is served to browsers and wallets over APIs and forwarded to registrars and hosting providers for takedown.",
+    points: [
+      "Launched on BNB Chain",
+      "Soulbound Passes as on-chain proof of every validated report",
+      "Daily IT token rewards for reporters and validators, with validator staking and penalties",
+    ],
+    stack: ["BNB_CHAIN", "SBT", "TOKENOMICS", "APIS"],
+    links: [{ label: "LITEPAPER", href: "/werepl-litepaper.pdf" }],
+  },
+];
