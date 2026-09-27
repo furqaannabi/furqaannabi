@@ -47,10 +47,16 @@ function WinCard({
 }) {
   return (
     <article
-      className="module-border card-hover bg-[#0A0A0A] p-4 flex flex-col gap-3 group relative h-full"
+      className={`module-border card-hover bg-[#0A0A0A] flex flex-col gap-3 group relative h-full ${
+        featured ? "p-4" : "p-3 sm:p-4"
+      }`}
     >
       <WinDetails win={win} rank={index + 1} total={HACKATHON_WINS.length} />
-      <div className="flex items-start justify-between gap-2">
+      <div
+        className={`flex items-start justify-between gap-2 ${
+          featured ? "" : "max-sm:flex-col"
+        }`}
+      >
         <h3
           className={`${
             featured ? "font-headline-sm text-headline-sm" : "font-body-md text-body-md font-semibold"
@@ -68,7 +74,11 @@ function WinCard({
           {win.prize}
         </span>
       </div>
-      <div className="flex items-start justify-between gap-2">
+      <div
+        className={`flex items-start justify-between gap-2 ${
+          featured ? "" : "max-sm:flex-col max-sm:gap-1"
+        }`}
+      >
         <span className="font-label-caps text-label-caps text-on-surface-variant">
           {`${win.placement} // ${win.event}`}
         </span>
@@ -98,7 +108,7 @@ function WinCard({
           </span>
         )}
       </div>
-      <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-4 relative z-10">
+      <div className="mt-auto pt-2 border-t border-surface-variant font-label-caps text-label-caps text-outline flex flex-wrap gap-x-4 gap-y-1 relative z-10">
         <a
           href={win.href}
           target="_blank"
@@ -322,11 +332,11 @@ export default function Home() {
               <span className="font-label-caps text-label-caps text-on-surface-variant">
                 SYS_01 // HACKATHON_WINS
               </span>
-              <span className="font-label-caps text-label-caps text-outline hidden md:inline">
+              <span className="font-label-caps text-label-caps text-outline">
                 SORTED_BY_PRIZE
               </span>
             </div>
-            <div className="hidden md:flex md:flex-col gap-gutter p-module-padding">
+            <div className="flex flex-col gap-gutter p-module-padding">
               {/* Featured wins */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 {FEATURED_WINS.map((win, i) => (
@@ -335,21 +345,9 @@ export default function Home() {
               </div>
 
               {/* Remaining wins */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
                 {COMPACT_WINS.map((win, i) => (
                   <WinCard key={win.name} win={win} index={i + FEATURED_COUNT} />
-                ))}
-              </div>
-            </div>
-
-            <div className="win-marquee md:hidden" aria-label="Hackathon wins">
-              <div className="win-marquee-track">
-                {[...WINS_BY_PRIZE, ...WINS_BY_PRIZE].map((win, i) => (
-                  <WinCard
-                    key={`${win.name}-${i}`}
-                    win={win}
-                    index={i % WINS_BY_PRIZE.length}
-                  />
                 ))}
               </div>
             </div>
