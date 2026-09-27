@@ -47,19 +47,15 @@ function WinCard({
 }) {
   return (
     <article
-      className={`module-border card-hover bg-[#0A0A0A] flex flex-col gap-3 group relative h-full ${
-        featured ? "p-4" : "p-3 sm:p-4"
-      }`}
+      className="module-border card-hover bg-[#0A0A0A] p-3 sm:p-4 flex flex-col gap-3 group relative h-full"
     >
       <WinDetails win={win} rank={index + 1} total={HACKATHON_WINS.length} />
-      <div
-        className={`flex items-start justify-between gap-2 ${
-          featured ? "" : "max-sm:flex-col"
-        }`}
-      >
+      <div className="flex items-start justify-between gap-2 max-sm:flex-col">
         <h3
           className={`${
-            featured ? "font-headline-sm text-headline-sm" : "font-body-md text-body-md font-semibold"
+            featured
+              ? "font-body-md text-body-md font-semibold sm:font-headline-sm sm:text-headline-sm"
+              : "font-body-md text-body-md font-semibold"
           } text-secondary group-hover:text-white transition-colors`}
         >
           {win.name}
@@ -74,11 +70,7 @@ function WinCard({
           {win.prize}
         </span>
       </div>
-      <div
-        className={`flex items-start justify-between gap-2 ${
-          featured ? "" : "max-sm:flex-col max-sm:gap-1"
-        }`}
-      >
+      <div className="flex items-start justify-between gap-2 max-sm:flex-col max-sm:gap-1">
         <span className="font-label-caps text-label-caps text-on-surface-variant">
           {`${win.placement} // ${win.event}`}
         </span>
@@ -88,22 +80,28 @@ function WinCard({
       </div>
       <p
         className={`font-body-md text-body-md text-on-surface text-sm ${
-          featured ? "" : "line-clamp-2 text-on-surface-variant"
+          featured ? "max-sm:line-clamp-2" : "line-clamp-2 text-on-surface-variant"
         }`}
       >
         {win.description}
       </p>
       <div className="flex flex-wrap gap-1.5">
-        {(featured ? win.stack : win.stack.slice(0, 3)).map((tech) => (
+        {(featured ? win.stack : win.stack.slice(0, 3)).map((tech, i) => (
           <span
             key={tech}
-            className="bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px]"
+            className={`bg-surface-variant text-on-surface px-1.5 py-0.5 font-label-caps text-label-caps text-[10px] ${
+              i >= 3 ? "max-sm:hidden" : ""
+            }`}
           >
             {tech}
           </span>
         ))}
-        {!featured && win.stack.length > 3 && (
-          <span className="text-outline px-1 py-0.5 font-label-caps text-label-caps text-[10px]">
+        {win.stack.length > 3 && (
+          <span
+            className={`text-outline px-1 py-0.5 font-label-caps text-label-caps text-[10px] ${
+              featured ? "sm:hidden" : ""
+            }`}
+          >
             +{win.stack.length - 3}
           </span>
         )}
@@ -336,16 +334,16 @@ export default function Home() {
                 SORTED_BY_PRIZE
               </span>
             </div>
-            <div className="flex flex-col gap-gutter p-module-padding">
-              {/* Featured wins */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <div className="grid grid-cols-2 gap-gutter p-module-padding md:flex md:flex-col">
+              {/* Featured wins (on phones both groups flow into the parent 2-col grid) */}
+              <div className="contents md:grid md:grid-cols-3 md:gap-gutter">
                 {FEATURED_WINS.map((win, i) => (
                   <WinCard key={win.name} win={win} index={i} featured />
                 ))}
               </div>
 
               {/* Remaining wins */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+              <div className="contents md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-gutter">
                 {COMPACT_WINS.map((win, i) => (
                   <WinCard key={win.name} win={win} index={i + FEATURED_COUNT} />
                 ))}
