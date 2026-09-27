@@ -101,7 +101,7 @@ export const HACKATHON_WINS: Win[] = [
       "On-chain DeFi reputation protocol on RepChain (an Avail rollup) — tracks Uniswap/Aave activity in real time via QuickNode Streams & Functions, with PYUSD staking multipliers.",
     stack: ["SOLIDITY", "QUICKNODE", "AVAIL", "PYUSD"],
     href: "https://github.com/furqaannabi/repcheck",
-    proof: "https://devfolio.co/projects/repcheck-0e48",
+    proof: "https://build-on.devfolio.co/projects/repcheck-0e48",
   },
 ];
 
