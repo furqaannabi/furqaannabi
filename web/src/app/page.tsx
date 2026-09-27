@@ -284,7 +284,8 @@ export default function Home() {
                   BCA
                 </div>
                 <div className="font-label-caps text-label-caps text-outline mt-2">
-                  FINTECH_&amp;_AI // AMITY · 2028
+                  <span className="block">AMITY_UNIVERSITY</span>
+                  <span className="block mt-0.5">FINTECH_&amp;_AI · 2028</span>
                 </div>
               </div>
               <div className="py-1 pl-4 md:px-6 border-l border-surface-variant">
