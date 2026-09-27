@@ -73,7 +73,7 @@ export const HACKATHON_WINS: Win[] = [
     prize: "$20K",
     description:
       "Creators mint their own meme tokens, battle for supremacy on Lens, and reward communities through a staking and engagement-rewards ecosystem.",
-    stack: ["SOLIDITY", "LENS", "NODE.JS", "THE_GRAPH", "IPFS"],
+    stack: ["SOLIDITY", "LENS", "NODE.JS", "IPFS"],
     href: "https://github.com/furqaannabi/memed",
     proof: "https://x.com/i/status/1929966819940676062",
   },
@@ -175,11 +175,11 @@ export const VENTURES: Venture[] = [
       "Grew out of a $20K hackathon win into a year-long startup",
       "Staking and engagement-rewards ecosystem for creator communities",
     ],
-    stack: ["SOLIDITY", "LENS", "NODE.JS", "THE_GRAPH", "IPFS"],
+    stack: ["SOLIDITY", "LENS", "NODE.JS", "IPFS"],
     links: [{ label: "SOURCE", href: "https://github.com/furqaannabi/memed" }],
   },
   {
-    name: "WeRepl",
+    name: "Werepl",
     role: "Founder",
     start: "Oct 2022",
     end: "May 2024",
