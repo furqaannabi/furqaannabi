@@ -70,7 +70,7 @@ From private settlement layers to AI-driven protocols, I build systems designed 
 
 <div align="center">
 
-[![X](https://img.shields.io/badge/-X-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://x.com/0xfurqaan)
+[![X](https://img.shields.io/badge/-X-0A192F?style=for-the-badge&logo=x&logoColor=64FFDA)](https://x.com/furqaan)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A192F?style=for-the-badge&logo=LinkedIn&logoColor=64FFDA)](https://www.linkedin.com/in/furqaannabi/)
 [![Telegram](https://img.shields.io/badge/-Telegram-0A192F?style=for-the-badge&logo=telegram&logoColor=64FFDA)](https://t.me/furqaannabi)
 [![Instagram](https://img.shields.io/badge/-Instagram-0A192F?style=for-the-badge&logo=instagram&logoColor=64FFDA)](https://www.instagram.com/furqaannabi/)

@@ -56,8 +56,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@0xfurqaan",
-    creator: "@0xfurqaan",
+    site: "@furqaan",
+    creator: "@furqaan",
     title: `${TITLE} — Full-Stack Engineer, Web3 & Autonomous Systems`,
     description: DESCRIPTION,
   },
